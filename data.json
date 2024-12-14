@@ -1,0 +1,206 @@
+[
+  {
+    "name": "exponentiation (**) operator"
+  },
+  {
+    "name": "Array.prototype.includes"
+  },
+  {
+    "name": "generator functions can't be used with \"new\""
+  },
+  {
+    "name": "generator throw() caught by inner generator"
+  },
+  {
+    "name": "strict fn w/ non-strict non-simple params is error"
+  },
+  {
+    "name": "nested rest destructuring, declarations"
+  },
+  {
+    "name": "nested rest destructuring, parameters"
+  },
+  {
+    "name": "Proxy, \"enumerate\" handler removed"
+  },
+  {
+    "name": "Proxy internal calls, Array.prototype.includes"
+  },
+  {
+    "name": "Object static methods"
+  },
+  {
+    "name": "String padding"
+  },
+  {
+    "name": "trailing commas in function syntax"
+  },
+  {
+    "name": "async functions"
+  },
+  {
+    "name": "shared memory and atomics"
+  },
+  {
+    "name": "RegExp \"u\" flag, case folding"
+  },
+  {
+    "name": "arguments.caller removed"
+  },
+  {
+    "name": "Object.prototype getter/setter methods"
+  },
+  {
+    "name": "Proxy internal calls, getter/setter methods"
+  },
+  {
+    "name": "assignments allowed in for-in head in non-strict mode"
+  },
+  {
+    "name": "object rest/spread properties"
+  },
+  {
+    "name": "Promise.prototype.finally"
+  },
+  {
+    "name": "s (dotAll) flag for regular expressions"
+  },
+  {
+    "name": "RegExp named capture groups"
+  },
+  {
+    "name": "RegExp Lookbehind Assertions"
+  },
+  {
+    "name": "RegExp Unicode Property Escapes"
+  },
+  {
+    "name": "Asynchronous Iterators"
+  },
+  {
+    "name": "Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets"
+  },
+  {
+    "name": "template literal revision"
+  },
+  {
+    "name": "Symbol.prototype.description"
+  },
+  {
+    "name": "Object.fromEntries"
+  },
+  {
+    "name": "string trimming"
+  },
+  {
+    "name": "Array.prototype.{flat, flatMap}"
+  },
+  {
+    "name": "optional catch binding"
+  },
+  {
+    "name": "Function.prototype.toString revision"
+  },
+  {
+    "name": "JSON superset"
+  },
+  {
+    "name": "Well-formed JSON.stringify"
+  },
+  {
+    "name": "String.prototype.matchAll"
+  },
+  {
+    "name": "BigInt"
+  },
+  {
+    "name": "Promise.allSettled"
+  },
+  {
+    "name": "globalThis"
+  },
+  {
+    "name": "optional chaining operator (?.)"
+  },
+  {
+    "name": "nullish coalescing operator (??)"
+  },
+  {
+    "name": "String.prototype.replaceAll"
+  },
+  {
+    "name": "Promise.any"
+  },
+  {
+    "name": "WeakReferences"
+  },
+  {
+    "name": "Logical Assignment"
+  },
+  {
+    "name": "numeric separators"
+  },
+  {
+    "name": "instance class fields"
+  },
+  {
+    "name": "static class fields"
+  },
+  {
+    "name": "private class methods"
+  },
+  {
+    "name": "Ergonomic brand checks for private fields"
+  },
+  {
+    "name": ".at() method on the built-in indexables"
+  },
+  {
+    "name": "Object.hasOwn"
+  },
+  {
+    "name": "Class static initialization blocks"
+  },
+  {
+    "name": "Error.cause property"
+  },
+  {
+    "name": "RegExp Match Indices (`hasIndices` / `d` flag)"
+  },
+  {
+    "name": "Array find from last"
+  },
+  {
+    "name": "Hashbang Grammar"
+  },
+  {
+    "name": "Change Array by copy"
+  },
+  {
+    "name": "RegExp `v` flag"
+  },
+  {
+    "name": "ArrayBuffer.prototype.transfer"
+  },
+  {
+    "name": "Promise.withResolvers"
+  },
+  {
+    "name": "Array Grouping"
+  },
+  {
+    "name": "Duplicate named capturing groups"
+  },
+  {
+    "name": "Set methods"
+  },
+  {
+    "name": "RegExp Pattern Modifiers"
+  },
+  {
+    "name": "Iterator Helpers"
+  },
+  {
+    "name": "Promise.try"
+  }
+]
