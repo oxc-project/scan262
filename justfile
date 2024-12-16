@@ -20,6 +20,9 @@ ready:
   just lint
   just doc
 
+watch *args='':
+  watchexec --no-vcs-ignore {{args}}
+
 fmt:
   cargo shear --fix
   cargo fmt --all
@@ -27,6 +30,9 @@ fmt:
 
 check:
   cargo check --workspace --all-features --all-targets --locked
+
+watch-check:
+  just watch "'cargo check; cargo clippy'"
 
 test:
   cargo test
