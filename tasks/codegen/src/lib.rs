@@ -25,6 +25,10 @@ impl Entry {
     }
 
     pub fn file_name(&self) -> String {
-        self.name().to_case(Case::Snake)
+        let mut name = self.name().to_case(Case::Snake);
+        if matches!(name.as_str(), "const" | "let" | "super") {
+            name = format!("feature_{name}");
+        }
+        name
     }
 }

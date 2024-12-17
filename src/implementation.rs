@@ -1,683 +1,153 @@
-use oxc::{semantic::AstNode, span::Span};
-
-use crate::{feature::Feature, features::*};
-
-impl Feature for ExponentiationOperator {
-    fn name(&self) -> &'static str {
-        "exponentiation (**) operator"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ArrayPrototypeIncludes {
-    fn name(&self) -> &'static str {
-        "Array.prototype.includes"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for GeneratorFunctionsCanTBeUsedWithNew {
-    fn name(&self) -> &'static str {
-        "generator functions can't be used with \"new\""
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for GeneratorThrowCaughtByInnerGenerator {
-    fn name(&self) -> &'static str {
-        "generator throw() caught by inner generator"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for StrictFnWNonStrictNonSimpleParamsIsError {
-    fn name(&self) -> &'static str {
-        "strict fn w/ non-strict non-simple params is error"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for NestedRestDestructuringDeclarations {
-    fn name(&self) -> &'static str {
-        "nested rest destructuring, declarations"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for NestedRestDestructuringParameters {
-    fn name(&self) -> &'static str {
-        "nested rest destructuring, parameters"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ProxyEnumerateHandlerRemoved {
-    fn name(&self) -> &'static str {
-        "Proxy, \"enumerate\" handler removed"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ProxyInternalCallsArrayPrototypeIncludes {
-    fn name(&self) -> &'static str {
-        "Proxy internal calls, Array.prototype.includes"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ObjectStaticMethods {
-    fn name(&self) -> &'static str {
-        "Object static methods"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for StringPadding {
-    fn name(&self) -> &'static str {
-        "String padding"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for TrailingCommasInFunctionSyntax {
-    fn name(&self) -> &'static str {
-        "trailing commas in function syntax"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for AsyncFunctions {
-    fn name(&self) -> &'static str {
-        "async functions"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for SharedMemoryAndAtomics {
-    fn name(&self) -> &'static str {
-        "shared memory and atomics"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for RegExpUFlagCaseFolding {
-    fn name(&self) -> &'static str {
-        "RegExp \"u\" flag, case folding"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ArgumentsCallerRemoved {
-    fn name(&self) -> &'static str {
-        "arguments.caller removed"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ObjectPrototypeGetterSetterMethods {
-    fn name(&self) -> &'static str {
-        "Object.prototype getter/setter methods"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ProxyInternalCallsGetterSetterMethods {
-    fn name(&self) -> &'static str {
-        "Proxy internal calls, getter/setter methods"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for AssignmentsAllowedInForInHeadInNonStrictMode {
-    fn name(&self) -> &'static str {
-        "assignments allowed in for-in head in non-strict mode"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ObjectRestSpreadProperties {
-    fn name(&self) -> &'static str {
-        "object rest/spread properties"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for PromisePrototypeFinally {
-    fn name(&self) -> &'static str {
-        "Promise.prototype.finally"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for SDotAllFlagForRegularExpressions {
-    fn name(&self) -> &'static str {
-        "s (dotAll) flag for regular expressions"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for RegExpNamedCaptureGroups {
-    fn name(&self) -> &'static str {
-        "RegExp named capture groups"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for RegExpLookbehindAssertions {
-    fn name(&self) -> &'static str {
-        "RegExp Lookbehind Assertions"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for RegExpUnicodePropertyEscapes {
-    fn name(&self) -> &'static str {
-        "RegExp Unicode Property Escapes"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for AsynchronousIterators {
-    fn name(&self) -> &'static str {
-        "Asynchronous Iterators"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ProxyOwnKeysHandlerDuplicateKeysForNonExtensibleTargets {
-    fn name(&self) -> &'static str {
-        "Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for TemplateLiteralRevision {
-    fn name(&self) -> &'static str {
-        "template literal revision"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for SymbolPrototypeDescription {
-    fn name(&self) -> &'static str {
-        "Symbol.prototype.description"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ObjectFromEntries {
-    fn name(&self) -> &'static str {
-        "Object.fromEntries"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for StringTrimming {
-    fn name(&self) -> &'static str {
-        "string trimming"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ArrayPrototypeFlatFlatMap {
-    fn name(&self) -> &'static str {
-        "Array.prototype.{flat, flatMap}"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for OptionalCatchBinding {
-    fn name(&self) -> &'static str {
-        "optional catch binding"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for FunctionPrototypeToStringRevision {
-    fn name(&self) -> &'static str {
-        "Function.prototype.toString revision"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for JsonSuperset {
-    fn name(&self) -> &'static str {
-        "JSON superset"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for WellFormedJsonStringify {
-    fn name(&self) -> &'static str {
-        "Well-formed JSON.stringify"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for StringPrototypeMatchAll {
-    fn name(&self) -> &'static str {
-        "String.prototype.matchAll"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for BigInt {
-    fn name(&self) -> &'static str {
-        "BigInt"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for PromiseAllSettled {
-    fn name(&self) -> &'static str {
-        "Promise.allSettled"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for GlobalThis {
-    fn name(&self) -> &'static str {
-        "globalThis"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for OptionalChainingOperator {
-    fn name(&self) -> &'static str {
-        "optional chaining operator (?.)"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for NullishCoalescingOperator {
-    fn name(&self) -> &'static str {
-        "nullish coalescing operator (??)"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for StringPrototypeReplaceAll {
-    fn name(&self) -> &'static str {
-        "String.prototype.replaceAll"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for PromiseAny {
-    fn name(&self) -> &'static str {
-        "Promise.any"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for WeakReferences {
-    fn name(&self) -> &'static str {
-        "WeakReferences"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for LogicalAssignment {
-    fn name(&self) -> &'static str {
-        "Logical Assignment"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for NumericSeparators {
-    fn name(&self) -> &'static str {
-        "numeric separators"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for InstanceClassFields {
-    fn name(&self) -> &'static str {
-        "instance class fields"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for StaticClassFields {
-    fn name(&self) -> &'static str {
-        "static class fields"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for PrivateClassMethods {
-    fn name(&self) -> &'static str {
-        "private class methods"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ErgonomicBrandChecksForPrivateFields {
-    fn name(&self) -> &'static str {
-        "Ergonomic brand checks for private fields"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for AtMethodOnTheBuiltInIndexables {
-    fn name(&self) -> &'static str {
-        ".at() method on the built-in indexables"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ObjectHasOwn {
-    fn name(&self) -> &'static str {
-        "Object.hasOwn"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ClassStaticInitializationBlocks {
-    fn name(&self) -> &'static str {
-        "Class static initialization blocks"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ErrorCauseProperty {
-    fn name(&self) -> &'static str {
-        "Error.cause property"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for RegExpMatchIndicesHasIndicesDFlag {
-    fn name(&self) -> &'static str {
-        "RegExp Match Indices (`hasIndices` / `d` flag)"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ArrayFindFromLast {
-    fn name(&self) -> &'static str {
-        "Array find from last"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for HashbangGrammar {
-    fn name(&self) -> &'static str {
-        "Hashbang Grammar"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ChangeArrayByCopy {
-    fn name(&self) -> &'static str {
-        "Change Array by copy"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for RegExpVFlag {
-    fn name(&self) -> &'static str {
-        "RegExp `v` flag"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ArrayBufferPrototypeTransfer {
-    fn name(&self) -> &'static str {
-        "ArrayBuffer.prototype.transfer"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for PromiseWithResolvers {
-    fn name(&self) -> &'static str {
-        "Promise.withResolvers"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for ArrayGrouping {
-    fn name(&self) -> &'static str {
-        "Array Grouping"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for DuplicateNamedCapturingGroups {
-    fn name(&self) -> &'static str {
-        "Duplicate named capturing groups"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for SetMethods {
-    fn name(&self) -> &'static str {
-        "Set methods"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for RegExpPatternModifiers {
-    fn name(&self) -> &'static str {
-        "RegExp Pattern Modifiers"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for IteratorHelpers {
-    fn name(&self) -> &'static str {
-        "Iterator Helpers"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
-
-impl Feature for PromiseTry {
-    fn name(&self) -> &'static str {
-        "Promise.try"
-    }
-
-    fn test(&self, _node: &AstNode<'_>) -> Option<Span> {
-        None
-    }
-}
+mod arguments_caller_removed;
+mod array_buffer_prototype_transfer;
+mod array_find_from_last;
+mod array_grouping;
+mod array_is_subclassable;
+mod array_is_template_object;
+mod array_methods;
+mod array_prototype_flat_flat_map;
+mod array_prototype_includes;
+mod array_prototype_methods;
+mod array_static_methods;
+mod arrow_functions;
+mod assignments_allowed_in_for_in_head_in_non_strict_mode;
+mod async_functions;
+mod async_iterator_helpers;
+mod asynchronous_iterators;
+mod at_method_on_the_built_in_indexables;
+mod big_int;
+mod block_level_function_declaration;
+mod change_array_by_copy;
+mod class;
+mod class_and_property_decorators;
+mod class_static_initialization_blocks;
+mod date_methods;
+mod date_prototype_symbol_to_primitive;
+mod default_function_parameters;
+mod destructuring_assignment;
+mod destructuring_declarations;
+mod destructuring_parameters;
+mod duplicate_named_capturing_groups;
+mod ergonomic_brand_checks_for_private_fields;
+mod error_cause_property;
+mod exponentiation_operator;
+mod feature_const;
+mod feature_let;
+mod feature_super;
+mod for_of_loops;
+mod function_is_subclassable;
+mod function_name_property;
+mod function_prototype_bind;
+mod function_prototype_to_string_revision;
+mod generator_function_sent_meta_property;
+mod generator_functions_can_t_be_used_with_new;
+mod generator_throw_caught_by_inner_generator;
+mod generators;
+mod global_this;
+mod hashbang_grammar;
+mod html_style_comments;
+mod immutable_globals;
+mod instance_class_fields;
+mod iterator_helpers;
+mod json;
+mod json_superset;
+mod legacy_reg_exp_features_in_java_script;
+mod logical_assignment;
+mod map;
+mod map_prototype_upsert;
+mod math_methods;
+mod miscellaneous;
+mod miscellaneous;
+mod miscellaneous_subclassables;
+mod nested_rest_destructuring_declarations;
+mod nested_rest_destructuring_parameters;
+mod new_target;
+mod non_strict_function_semantics;
+mod nullish_coalescing_operator;
+mod number_methods;
+mod number_properties;
+mod numeric_separators;
+mod object_array_literal_extensions;
+mod object_from_entries;
+mod object_has_own;
+mod object_literal_extensions;
+mod object_prototype_getter_setter_methods;
+mod object_prototype_proto;
+mod object_rest_spread_properties;
+mod object_static_methods;
+mod object_static_methods;
+mod object_static_methods;
+mod object_static_methods_accept_primitives;
+mod octal_and_binary_literals;
+mod optional_catch_binding;
+mod optional_chaining_operator;
+mod own_property_order;
+mod private_class_methods;
+mod promise;
+mod promise_all_settled;
+mod promise_any;
+mod promise_is_subclassable;
+mod promise_prototype_finally;
+mod promise_try;
+mod promise_with_resolvers;
+mod proper_tail_calls_tail_call_optimisation;
+mod proto_in_object_literals;
+mod prototype_of_bound_functions;
+mod proxy;
+mod proxy_enumerate_handler_removed;
+mod proxy_internal_calls_array_prototype_includes;
+mod proxy_internal_calls_getter_setter_methods;
+mod proxy_internal_define_property_calls;
+mod proxy_internal_delete_property_calls;
+mod proxy_internal_get_calls;
+mod proxy_internal_get_own_property_descriptor_calls;
+mod proxy_internal_own_keys_calls;
+mod proxy_internal_set_calls;
+mod proxy_own_keys_handler_duplicate_keys_for_non_extensible_targets;
+mod reflect;
+mod reg_exp_escaping;
+mod reg_exp_is_subclassable;
+mod reg_exp_lookbehind_assertions;
+mod reg_exp_match_indices_has_indices_d_flag;
+mod reg_exp_named_capture_groups;
+mod reg_exp_pattern_modifiers;
+mod reg_exp_prototype_compile;
+mod reg_exp_prototype_properties;
+mod reg_exp_syntax_extensions;
+mod reg_exp_u_flag_case_folding;
+mod reg_exp_unicode_property_escapes;
+mod reg_exp_v_flag;
+mod reg_exp_y_and_u_flags;
+mod rest_parameters;
+mod s_dot_all_flag_for_regular_expressions;
+mod set;
+mod set_methods;
+mod shadow_realm;
+mod shared_memory_and_atomics;
+mod spread_syntax_for_iterable_objects;
+mod static_class_fields;
+mod strict_fn_w_non_strict_non_simple_params_is_error;
+mod strict_mode;
+mod string_padding;
+mod string_properties_and_methods;
+mod string_prototype_html_methods;
+mod string_prototype_match_all;
+mod string_prototype_methods;
+mod string_prototype_replace_all;
+mod string_static_methods;
+mod string_trimming;
+mod symbol;
+mod symbol_prototype_description;
+mod template_literal_revision;
+mod template_literals;
+mod throw_expressions;
+mod trailing_commas_in_function_syntax;
+mod typed_arrays;
+mod uint_array_to_from_base_and_hex;
+mod unicode_code_point_escapes;
+mod updated_identifier_syntax;
+mod weak_map;
+mod weak_references;
+mod weak_set;
+mod well_formed_json_stringify;
+mod well_known_symbols;

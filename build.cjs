@@ -3,6 +3,7 @@ const es6 = require('./compat-table/data-es6.js');
 const es2016Plus = require('./compat-table/data-es2016plus.js');
 const esnext = require('./compat-table/data-esnext.js');
 
+// TODO: add target for diff file.
 const data = [...es5.tests, ...es6.tests, ...es2016Plus.tests, ...esnext.tests].map((test) => {
   return mapper(test)
 });
