@@ -50,20 +50,12 @@ unnecessary_safety_comment = "warn"
 undocumented_unsafe_blocks = "warn"
 infinite_loop = "warn"
 
-[workspace.dependencies]
-convert_case = "0.6.0"
-prettyplease = "0.2.20"
-project-root = "0.2.2"
-quote = "1.0"
-serde = "1.0"
-serde_json = "1.0"
-syn = "2"
-
 [lints]
 workspace = true
 
 [dependencies]
 oxc = { version = "0.41.0", features = ["semantic"] }
+rayon = "1.10.0"
 
 [profile.release]
 # Configurations explicitly listed here for clarity.
