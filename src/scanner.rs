@@ -17,6 +17,7 @@ pub struct Scanner {
 
 pub struct ScanReturn {
     pub diagnostics: (PathBuf, Vec<Error>),
+    pub stats: Vec<usize>,
 }
 
 impl Scanner {
@@ -36,10 +37,13 @@ impl Scanner {
 
         let semantic_ret = SemanticBuilder::new().build(&ret.program);
         let mut ctx = Ctx::default();
+        let mut stats = vec![0; features.len()];
 
         for node in semantic_ret.semantic.nodes() {
-            for feature in features {
+            for (i, feature) in features.iter().enumerate() {
+                let count = ctx.diagnostics.len();
                 feature.test(node, &mut ctx);
+                stats[i] += ctx.diagnostics.len() - count;
             }
         }
 
@@ -49,6 +53,7 @@ impl Scanner {
                 &self.source_text,
                 ctx.diagnostics(),
             ),
+            stats,
         }
     }
 }

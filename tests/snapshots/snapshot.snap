@@ -47,6 +47,9 @@ snapshot_kind: text
   x Failed: Proxy internal calls, Array.prototype.includes
 
 
+  x Failed: strict fn w/ non-strict non-simple params is error
+
+
   x Failed: arguments.caller removed
 
 
@@ -224,16 +227,31 @@ snapshot_kind: text
   x Failed: Set methods
 
 
+  x Failed: Array methods
+
+
+  x Failed: Date methods
+
+
   x Failed: Immutable globals
 
 
   x Failed: Miscellaneous
 
 
+  x Failed: Number methods
+
+
   x Failed: Object/array literal extensions
 
 
+  x Failed: Object static methods
+
+
   x Failed: Strict mode
+
+
+  x Failed: String properties and methods
 
 
   x Failed: Array is subclassable
@@ -282,6 +300,9 @@ snapshot_kind: text
 
 
   x Failed: generators
+
+
+  x Failed: HTML-style comments
 
 
   x Failed: let
@@ -432,6 +453,9 @@ snapshot_kind: text
 
 
   x Failed: Class and Property Decorators
+
+
+  x Failed: Generator function.sent Meta Property
 
 
   x Failed: Legacy RegExp features in JavaScript

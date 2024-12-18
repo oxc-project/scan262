@@ -3,6 +3,7 @@
 use std::{
     fs,
     path::{Path, PathBuf},
+    sync::mpsc,
 };
 
 use oxc::{diagnostics::DiagnosticService, span::VALID_EXTENSIONS};
@@ -36,6 +37,8 @@ fn main() {
     };
 
     let mut diagnostic_service = DiagnosticService::default();
+    let paths_len = paths.len();
+    let (tx_stats, rx_stats) = mpsc::channel::<Vec<usize>>();
 
     rayon::spawn({
         let tx_error = diagnostic_service.sender().clone();
@@ -44,6 +47,7 @@ fn main() {
                 let source_text = fs::read_to_string(path).unwrap();
                 let scanner = Scanner::new(path.to_path_buf(), source_text);
                 let ret = scanner.scan(FEATURES);
+                tx_stats.send(ret.stats).unwrap();
                 tx_error.send(Some(ret.diagnostics)).unwrap();
             });
             tx_error.send(None).unwrap();
@@ -51,4 +55,19 @@ fn main() {
     });
 
     diagnostic_service.run();
+
+    let mut all_stats = vec![0; FEATURES.len()];
+    for _ in 0..paths_len {
+        let stats = rx_stats.recv().unwrap();
+        for (j, count) in stats.iter().enumerate() {
+            all_stats[j] += count;
+        }
+    }
+
+    for (i, feature) in FEATURES.iter().enumerate() {
+        let stats = all_stats[i];
+        if stats > 0 {
+            println!("{}: {}", feature.name(), stats);
+        }
+    }
 }
