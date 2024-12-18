@@ -4,6 +4,9 @@ impl Meta for Es2023HashbangGrammar {
     fn name(&self) -> &'static str {
         "Hashbang Grammar"
     }
+    fn key(&self) -> &'static str {
+        "es2023_hashbang_grammar"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

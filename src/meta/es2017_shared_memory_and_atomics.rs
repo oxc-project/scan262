@@ -4,6 +4,9 @@ impl Meta for Es2017SharedMemoryAndAtomics {
     fn name(&self) -> &'static str {
         "shared memory and atomics"
     }
+    fn key(&self) -> &'static str {
+        "es2017_shared_memory_and_atomics"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

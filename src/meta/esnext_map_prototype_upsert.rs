@@ -4,6 +4,9 @@ impl Meta for EsnextMapPrototypeUpsert {
     fn name(&self) -> &'static str {
         "Map.prototype.upsert"
     }
+    fn key(&self) -> &'static str {
+        "esnext_map_prototype_upsert"
+    }
     fn target(&self) -> &'static str {
         "esnext"
     }

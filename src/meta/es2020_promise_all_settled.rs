@@ -4,6 +4,9 @@ impl Meta for Es2020PromiseAllSettled {
     fn name(&self) -> &'static str {
         "Promise.allSettled"
     }
+    fn key(&self) -> &'static str {
+        "es2020_promise_all_settled"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

@@ -4,6 +4,9 @@ impl Meta for Es2017StringPadding {
     fn name(&self) -> &'static str {
         "String padding"
     }
+    fn key(&self) -> &'static str {
+        "es2017_string_padding"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

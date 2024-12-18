@@ -4,6 +4,9 @@ impl Meta for Es6HtmlStyleComments {
     fn name(&self) -> &'static str {
         "HTML-style comments"
     }
+    fn key(&self) -> &'static str {
+        "es6_html_style_comments"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

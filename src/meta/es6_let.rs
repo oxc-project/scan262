@@ -4,6 +4,9 @@ impl Meta for Es6Let {
     fn name(&self) -> &'static str {
         "let"
     }
+    fn key(&self) -> &'static str {
+        "es6_let"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

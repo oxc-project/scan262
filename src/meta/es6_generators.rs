@@ -4,6 +4,9 @@ impl Meta for Es6Generators {
     fn name(&self) -> &'static str {
         "generators"
     }
+    fn key(&self) -> &'static str {
+        "es6_generators"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

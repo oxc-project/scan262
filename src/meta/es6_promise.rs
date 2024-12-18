@@ -4,6 +4,9 @@ impl Meta for Es6Promise {
     fn name(&self) -> &'static str {
         "Promise"
     }
+    fn key(&self) -> &'static str {
+        "es6_promise"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

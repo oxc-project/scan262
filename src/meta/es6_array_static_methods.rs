@@ -4,6 +4,9 @@ impl Meta for Es6ArrayStaticMethods {
     fn name(&self) -> &'static str {
         "Array static methods"
     }
+    fn key(&self) -> &'static str {
+        "es6_array_static_methods"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

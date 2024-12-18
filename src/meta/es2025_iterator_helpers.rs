@@ -4,6 +4,9 @@ impl Meta for Es2025IteratorHelpers {
     fn name(&self) -> &'static str {
         "Iterator Helpers"
     }
+    fn key(&self) -> &'static str {
+        "es2025_iterator_helpers"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

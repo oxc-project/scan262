@@ -4,6 +4,9 @@ impl Meta for Es6StringPrototypeMethods {
     fn name(&self) -> &'static str {
         "String.prototype methods"
     }
+    fn key(&self) -> &'static str {
+        "es6_string_prototype_methods"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

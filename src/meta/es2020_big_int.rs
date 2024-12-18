@@ -4,6 +4,9 @@ impl Meta for Es2020BigInt {
     fn name(&self) -> &'static str {
         "BigInt"
     }
+    fn key(&self) -> &'static str {
+        "es2020_big_int"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

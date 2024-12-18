@@ -4,6 +4,9 @@ impl Meta for Es6SpreadSyntaxForIterableObjects {
     fn name(&self) -> &'static str {
         "spread syntax for iterable objects"
     }
+    fn key(&self) -> &'static str {
+        "es6_spread_syntax_for_iterable_objects"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

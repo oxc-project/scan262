@@ -4,6 +4,9 @@ impl Meta for Es6Set {
     fn name(&self) -> &'static str {
         "Set"
     }
+    fn key(&self) -> &'static str {
+        "es6_set"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

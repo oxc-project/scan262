@@ -4,6 +4,9 @@ impl Meta for Es2024ArrayGrouping {
     fn name(&self) -> &'static str {
         "Array Grouping"
     }
+    fn key(&self) -> &'static str {
+        "es2024_array_grouping"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

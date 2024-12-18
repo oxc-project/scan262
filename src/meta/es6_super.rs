@@ -4,6 +4,9 @@ impl Meta for Es6Super {
     fn name(&self) -> &'static str {
         "super"
     }
+    fn key(&self) -> &'static str {
+        "es6_super"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

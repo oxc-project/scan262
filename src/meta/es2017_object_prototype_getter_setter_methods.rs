@@ -4,6 +4,9 @@ impl Meta for Es2017ObjectPrototypeGetterSetterMethods {
     fn name(&self) -> &'static str {
         "Object.prototype getter/setter methods"
     }
+    fn key(&self) -> &'static str {
+        "es2017_object_prototype_getter_setter_methods"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

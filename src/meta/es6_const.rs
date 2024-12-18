@@ -4,6 +4,9 @@ impl Meta for Es6Const {
     fn name(&self) -> &'static str {
         "const"
     }
+    fn key(&self) -> &'static str {
+        "es6_const"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

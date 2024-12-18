@@ -4,6 +4,9 @@ impl Meta for Es6RegExpSyntaxExtensions {
     fn name(&self) -> &'static str {
         "RegExp syntax extensions"
     }
+    fn key(&self) -> &'static str {
+        "es6_reg_exp_syntax_extensions"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

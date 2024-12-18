@@ -4,6 +4,9 @@ impl Meta for Es6ObjectPrototypeProto {
     fn name(&self) -> &'static str {
         "Object.prototype.__proto__"
     }
+    fn key(&self) -> &'static str {
+        "es6_object_prototype_proto"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

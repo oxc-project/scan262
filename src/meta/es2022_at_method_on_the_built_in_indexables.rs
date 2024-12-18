@@ -4,6 +4,9 @@ impl Meta for Es2022AtMethodOnTheBuiltInIndexables {
     fn name(&self) -> &'static str {
         ".at() method on the built-in indexables"
     }
+    fn key(&self) -> &'static str {
+        "es2022_at_method_on_the_built_in_indexables"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

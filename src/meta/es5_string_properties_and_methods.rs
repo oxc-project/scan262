@@ -4,6 +4,9 @@ impl Meta for Es5StringPropertiesAndMethods {
     fn name(&self) -> &'static str {
         "String properties and methods"
     }
+    fn key(&self) -> &'static str {
+        "es5_string_properties_and_methods"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

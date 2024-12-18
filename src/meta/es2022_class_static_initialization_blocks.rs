@@ -4,6 +4,9 @@ impl Meta for Es2022ClassStaticInitializationBlocks {
     fn name(&self) -> &'static str {
         "Class static initialization blocks"
     }
+    fn key(&self) -> &'static str {
+        "es2022_class_static_initialization_blocks"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

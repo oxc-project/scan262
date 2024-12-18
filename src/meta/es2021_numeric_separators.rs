@@ -4,6 +4,9 @@ impl Meta for Es2021NumericSeparators {
     fn name(&self) -> &'static str {
         "numeric separators"
     }
+    fn key(&self) -> &'static str {
+        "es2021_numeric_separators"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

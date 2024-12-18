@@ -4,6 +4,9 @@ impl Meta for Es2017ArgumentsCallerRemoved {
     fn name(&self) -> &'static str {
         "arguments.caller removed"
     }
+    fn key(&self) -> &'static str {
+        "es2017_arguments_caller_removed"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

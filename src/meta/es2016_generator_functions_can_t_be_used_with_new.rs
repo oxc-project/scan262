@@ -4,6 +4,9 @@ impl Meta for Es2016GeneratorFunctionsCanTBeUsedWithNew {
     fn name(&self) -> &'static str {
         "generator functions can't be used with \"new\""
     }
+    fn key(&self) -> &'static str {
+        "es2016_generator_functions_can_t_be_used_with_new"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

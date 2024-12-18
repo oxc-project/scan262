@@ -4,6 +4,9 @@ impl Meta for Es6TemplateLiterals {
     fn name(&self) -> &'static str {
         "template literals"
     }
+    fn key(&self) -> &'static str {
+        "es6_template_literals"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

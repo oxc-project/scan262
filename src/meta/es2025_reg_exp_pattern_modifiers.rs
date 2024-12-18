@@ -4,6 +4,9 @@ impl Meta for Es2025RegExpPatternModifiers {
     fn name(&self) -> &'static str {
         "RegExp Pattern Modifiers"
     }
+    fn key(&self) -> &'static str {
+        "es2025_reg_exp_pattern_modifiers"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

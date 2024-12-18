@@ -4,6 +4,9 @@ impl Meta for Es2023ArrayFindFromLast {
     fn name(&self) -> &'static str {
         "Array find from last"
     }
+    fn key(&self) -> &'static str {
+        "es2023_array_find_from_last"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

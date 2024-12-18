@@ -4,6 +4,9 @@ impl Meta for Es6WellKnownSymbols {
     fn name(&self) -> &'static str {
         "well-known symbols"
     }
+    fn key(&self) -> &'static str {
+        "es6_well_known_symbols"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

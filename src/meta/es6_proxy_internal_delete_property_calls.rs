@@ -4,6 +4,9 @@ impl Meta for Es6ProxyInternalDeletePropertyCalls {
     fn name(&self) -> &'static str {
         "Proxy, internal 'deleteProperty' calls"
     }
+    fn key(&self) -> &'static str {
+        "es6_proxy_internal_delete_property_calls"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

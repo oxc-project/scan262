@@ -4,6 +4,9 @@ impl Meta for Es2016ProxyInternalCallsArrayPrototypeIncludes {
     fn name(&self) -> &'static str {
         "Proxy internal calls, Array.prototype.includes"
     }
+    fn key(&self) -> &'static str {
+        "es2016_proxy_internal_calls_array_prototype_includes"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

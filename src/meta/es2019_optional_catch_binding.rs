@@ -4,6 +4,9 @@ impl Meta for Es2019OptionalCatchBinding {
     fn name(&self) -> &'static str {
         "optional catch binding"
     }
+    fn key(&self) -> &'static str {
+        "es2019_optional_catch_binding"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

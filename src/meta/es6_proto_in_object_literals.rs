@@ -4,6 +4,9 @@ impl Meta for Es6ProtoInObjectLiterals {
     fn name(&self) -> &'static str {
         "__proto__ in object literals"
     }
+    fn key(&self) -> &'static str {
+        "es6_proto_in_object_literals"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

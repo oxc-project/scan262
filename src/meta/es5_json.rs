@@ -4,6 +4,9 @@ impl Meta for Es5Json {
     fn name(&self) -> &'static str {
         "JSON"
     }
+    fn key(&self) -> &'static str {
+        "es5_json"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

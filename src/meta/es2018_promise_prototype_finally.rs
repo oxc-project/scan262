@@ -4,6 +4,9 @@ impl Meta for Es2018PromisePrototypeFinally {
     fn name(&self) -> &'static str {
         "Promise.prototype.finally"
     }
+    fn key(&self) -> &'static str {
+        "es2018_promise_prototype_finally"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

@@ -4,6 +4,9 @@ impl Meta for Es6ObjectStaticMethodsAcceptPrimitives {
     fn name(&self) -> &'static str {
         "Object static methods accept primitives"
     }
+    fn key(&self) -> &'static str {
+        "es6_object_static_methods_accept_primitives"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

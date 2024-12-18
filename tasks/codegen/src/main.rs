@@ -9,7 +9,7 @@ fn main() {
     let data = fs::read_to_string("./data.json").unwrap();
     let entries = serde_json::from_str::<Vec<Entry>>(&data).unwrap();
     for entry in &entries {
-        generate_implementation(entry);
+        // generate_implementation(entry);
         generate_meta(entry);
     }
     generate_implementation_module(&entries);
@@ -17,6 +17,7 @@ fn main() {
     generate_features(&entries);
 }
 
+#[expect(dead_code)]
 fn generate_implementation(entry: &Entry) {
     let struct_name = entry.struct_name();
     let token_stream = quote! {
@@ -37,6 +38,7 @@ fn generate_implementation(entry: &Entry) {
 
 fn generate_meta(entry: &Entry) {
     let struct_name = entry.struct_name();
+    let key = entry.file_name();
     let name = &entry.name;
     let target = &entry.target;
     let category = &entry.category;
@@ -67,6 +69,9 @@ fn generate_meta(entry: &Entry) {
         impl Meta for #struct_name {
             fn name(&self) -> &'static str {
                 #name
+            }
+            fn key(&self) -> &'static str {
+                #key
             }
             fn target(&self) -> &'static str {
                 #target

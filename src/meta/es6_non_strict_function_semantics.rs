@@ -4,6 +4,9 @@ impl Meta for Es6NonStrictFunctionSemantics {
     fn name(&self) -> &'static str {
         "non-strict function semantics"
     }
+    fn key(&self) -> &'static str {
+        "es6_non_strict_function_semantics"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

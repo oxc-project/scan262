@@ -4,6 +4,9 @@ impl Meta for Es2020GlobalThis {
     fn name(&self) -> &'static str {
         "globalThis"
     }
+    fn key(&self) -> &'static str {
+        "es2020_global_this"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

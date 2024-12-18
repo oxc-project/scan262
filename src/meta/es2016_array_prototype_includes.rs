@@ -4,6 +4,9 @@ impl Meta for Es2016ArrayPrototypeIncludes {
     fn name(&self) -> &'static str {
         "Array.prototype.includes"
     }
+    fn key(&self) -> &'static str {
+        "es2016_array_prototype_includes"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

@@ -4,6 +4,9 @@ impl Meta for Es2018RegExpUnicodePropertyEscapes {
     fn name(&self) -> &'static str {
         "RegExp Unicode Property Escapes"
     }
+    fn key(&self) -> &'static str {
+        "es2018_reg_exp_unicode_property_escapes"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

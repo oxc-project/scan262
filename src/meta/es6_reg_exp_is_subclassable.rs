@@ -4,6 +4,9 @@ impl Meta for Es6RegExpIsSubclassable {
     fn name(&self) -> &'static str {
         "RegExp is subclassable"
     }
+    fn key(&self) -> &'static str {
+        "es6_reg_exp_is_subclassable"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

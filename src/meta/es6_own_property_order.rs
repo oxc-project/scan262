@@ -4,6 +4,9 @@ impl Meta for Es6OwnPropertyOrder {
     fn name(&self) -> &'static str {
         "own property order"
     }
+    fn key(&self) -> &'static str {
+        "es6_own_property_order"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

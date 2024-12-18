@@ -4,6 +4,9 @@ impl Meta for Es6ProxyInternalGetOwnPropertyDescriptorCalls {
     fn name(&self) -> &'static str {
         "Proxy, internal 'getOwnPropertyDescriptor' calls"
     }
+    fn key(&self) -> &'static str {
+        "es6_proxy_internal_get_own_property_descriptor_calls"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

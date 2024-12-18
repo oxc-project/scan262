@@ -4,6 +4,9 @@ impl Meta for Es6OctalAndBinaryLiterals {
     fn name(&self) -> &'static str {
         "octal and binary literals"
     }
+    fn key(&self) -> &'static str {
+        "es6_octal_and_binary_literals"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

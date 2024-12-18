@@ -4,6 +4,9 @@ impl Meta for Es2019JsonSuperset {
     fn name(&self) -> &'static str {
         "JSON superset"
     }
+    fn key(&self) -> &'static str {
+        "es2019_json_superset"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

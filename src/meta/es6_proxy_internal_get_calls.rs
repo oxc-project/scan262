@@ -4,6 +4,9 @@ impl Meta for Es6ProxyInternalGetCalls {
     fn name(&self) -> &'static str {
         "Proxy, internal 'get' calls"
     }
+    fn key(&self) -> &'static str {
+        "es6_proxy_internal_get_calls"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

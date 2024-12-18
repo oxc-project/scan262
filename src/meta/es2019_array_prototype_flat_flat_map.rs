@@ -4,6 +4,9 @@ impl Meta for Es2019ArrayPrototypeFlatFlatMap {
     fn name(&self) -> &'static str {
         "Array.prototype.{flat, flatMap}"
     }
+    fn key(&self) -> &'static str {
+        "es2019_array_prototype_flat_flat_map"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

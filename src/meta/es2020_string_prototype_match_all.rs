@@ -4,6 +4,9 @@ impl Meta for Es2020StringPrototypeMatchAll {
     fn name(&self) -> &'static str {
         "String.prototype.matchAll"
     }
+    fn key(&self) -> &'static str {
+        "es2020_string_prototype_match_all"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

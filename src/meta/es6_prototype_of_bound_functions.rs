@@ -4,6 +4,9 @@ impl Meta for Es6PrototypeOfBoundFunctions {
     fn name(&self) -> &'static str {
         "prototype of bound functions"
     }
+    fn key(&self) -> &'static str {
+        "es6_prototype_of_bound_functions"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

@@ -4,6 +4,9 @@ impl Meta for Es2024PromiseWithResolvers {
     fn name(&self) -> &'static str {
         "Promise.withResolvers"
     }
+    fn key(&self) -> &'static str {
+        "es2024_promise_with_resolvers"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

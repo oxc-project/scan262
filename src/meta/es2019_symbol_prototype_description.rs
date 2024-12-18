@@ -4,6 +4,9 @@ impl Meta for Es2019SymbolPrototypeDescription {
     fn name(&self) -> &'static str {
         "Symbol.prototype.description"
     }
+    fn key(&self) -> &'static str {
+        "es2019_symbol_prototype_description"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

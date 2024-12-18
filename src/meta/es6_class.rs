@@ -4,6 +4,9 @@ impl Meta for Es6Class {
     fn name(&self) -> &'static str {
         "class"
     }
+    fn key(&self) -> &'static str {
+        "es6_class"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

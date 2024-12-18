@@ -7,4 +7,5 @@ mod implementation;
 mod meta;
 mod scanner;
 
+pub use crate::{feature::Feature, features::FEATURES};
 pub use scanner::Scanner;

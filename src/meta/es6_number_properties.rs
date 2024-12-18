@@ -4,6 +4,9 @@ impl Meta for Es6NumberProperties {
     fn name(&self) -> &'static str {
         "Number properties"
     }
+    fn key(&self) -> &'static str {
+        "es6_number_properties"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

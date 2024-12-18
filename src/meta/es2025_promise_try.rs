@@ -4,6 +4,9 @@ impl Meta for Es2025PromiseTry {
     fn name(&self) -> &'static str {
         "Promise.try"
     }
+    fn key(&self) -> &'static str {
+        "es2025_promise_try"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

@@ -4,6 +4,9 @@ impl Meta for Es5DateMethods {
     fn name(&self) -> &'static str {
         "Date methods"
     }
+    fn key(&self) -> &'static str {
+        "es5_date_methods"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

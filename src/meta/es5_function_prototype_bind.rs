@@ -4,6 +4,9 @@ impl Meta for Es5FunctionPrototypeBind {
     fn name(&self) -> &'static str {
         "Function.prototype.bind"
     }
+    fn key(&self) -> &'static str {
+        "es5_function_prototype_bind"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

@@ -4,6 +4,9 @@ impl Meta for Es6Miscellaneous {
     fn name(&self) -> &'static str {
         "miscellaneous"
     }
+    fn key(&self) -> &'static str {
+        "es6_miscellaneous"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

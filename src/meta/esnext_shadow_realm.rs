@@ -4,6 +4,9 @@ impl Meta for EsnextShadowRealm {
     fn name(&self) -> &'static str {
         "ShadowRealm"
     }
+    fn key(&self) -> &'static str {
+        "esnext_shadow_realm"
+    }
     fn target(&self) -> &'static str {
         "esnext"
     }

@@ -4,6 +4,9 @@ impl Meta for Es6BlockLevelFunctionDeclaration {
     fn name(&self) -> &'static str {
         "block-level function declaration"
     }
+    fn key(&self) -> &'static str {
+        "es6_block_level_function_declaration"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

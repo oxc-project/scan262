@@ -4,6 +4,9 @@ impl Meta for Es2021StringPrototypeReplaceAll {
     fn name(&self) -> &'static str {
         "String.prototype.replaceAll"
     }
+    fn key(&self) -> &'static str {
+        "es2021_string_prototype_replace_all"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

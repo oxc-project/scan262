@@ -4,6 +4,9 @@ impl Meta for Es6RegExpPrototypeProperties {
     fn name(&self) -> &'static str {
         "RegExp.prototype properties"
     }
+    fn key(&self) -> &'static str {
+        "es6_reg_exp_prototype_properties"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

@@ -4,6 +4,9 @@ impl Meta for Es6DatePrototypeSymbolToPrimitive {
     fn name(&self) -> &'static str {
         "Date.prototype[Symbol.toPrimitive]"
     }
+    fn key(&self) -> &'static str {
+        "es6_date_prototype_symbol_to_primitive"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

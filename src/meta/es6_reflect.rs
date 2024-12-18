@@ -4,6 +4,9 @@ impl Meta for Es6Reflect {
     fn name(&self) -> &'static str {
         "Reflect"
     }
+    fn key(&self) -> &'static str {
+        "es6_reflect"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

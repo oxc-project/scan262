@@ -4,6 +4,9 @@ impl Meta for Es6ArrayPrototypeMethods {
     fn name(&self) -> &'static str {
         "Array.prototype methods"
     }
+    fn key(&self) -> &'static str {
+        "es6_array_prototype_methods"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

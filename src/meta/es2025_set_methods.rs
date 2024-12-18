@@ -4,6 +4,9 @@ impl Meta for Es2025SetMethods {
     fn name(&self) -> &'static str {
         "Set methods"
     }
+    fn key(&self) -> &'static str {
+        "es2025_set_methods"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

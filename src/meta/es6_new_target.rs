@@ -4,6 +4,9 @@ impl Meta for Es6NewTarget {
     fn name(&self) -> &'static str {
         "new.target"
     }
+    fn key(&self) -> &'static str {
+        "es6_new_target"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

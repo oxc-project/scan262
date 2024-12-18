@@ -4,6 +4,9 @@ impl Meta for Es2018RegExpNamedCaptureGroups {
     fn name(&self) -> &'static str {
         "RegExp named capture groups"
     }
+    fn key(&self) -> &'static str {
+        "es2018_reg_exp_named_capture_groups"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

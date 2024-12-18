@@ -4,6 +4,9 @@ impl Meta for Es6ArrowFunctions {
     fn name(&self) -> &'static str {
         "arrow functions"
     }
+    fn key(&self) -> &'static str {
+        "es6_arrow_functions"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

@@ -4,6 +4,9 @@ impl Meta for EsnextLegacyRegExpFeaturesInJavaScript {
     fn name(&self) -> &'static str {
         "Legacy RegExp features in JavaScript"
     }
+    fn key(&self) -> &'static str {
+        "esnext_legacy_reg_exp_features_in_java_script"
+    }
     fn target(&self) -> &'static str {
         "esnext"
     }

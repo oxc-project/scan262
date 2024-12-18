@@ -4,6 +4,9 @@ impl Meta for Es2024RegExpVFlag {
     fn name(&self) -> &'static str {
         "RegExp `v` flag"
     }
+    fn key(&self) -> &'static str {
+        "es2024_reg_exp_v_flag"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

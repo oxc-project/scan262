@@ -4,6 +4,9 @@ impl Meta for Es2021PromiseAny {
     fn name(&self) -> &'static str {
         "Promise.any"
     }
+    fn key(&self) -> &'static str {
+        "es2021_promise_any"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

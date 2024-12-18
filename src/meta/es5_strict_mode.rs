@@ -4,6 +4,9 @@ impl Meta for Es5StrictMode {
     fn name(&self) -> &'static str {
         "Strict mode"
     }
+    fn key(&self) -> &'static str {
+        "es5_strict_mode"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

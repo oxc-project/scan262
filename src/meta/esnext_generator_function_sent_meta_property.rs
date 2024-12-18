@@ -4,6 +4,9 @@ impl Meta for EsnextGeneratorFunctionSentMetaProperty {
     fn name(&self) -> &'static str {
         "Generator function.sent Meta Property"
     }
+    fn key(&self) -> &'static str {
+        "esnext_generator_function_sent_meta_property"
+    }
     fn target(&self) -> &'static str {
         "esnext"
     }

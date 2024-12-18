@@ -4,6 +4,9 @@ impl Meta for EsnextAsyncIteratorHelpers {
     fn name(&self) -> &'static str {
         "Async Iterator Helpers"
     }
+    fn key(&self) -> &'static str {
+        "esnext_async_iterator_helpers"
+    }
     fn target(&self) -> &'static str {
         "esnext"
     }

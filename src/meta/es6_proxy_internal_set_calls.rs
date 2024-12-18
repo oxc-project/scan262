@@ -4,6 +4,9 @@ impl Meta for Es6ProxyInternalSetCalls {
     fn name(&self) -> &'static str {
         "Proxy, internal 'set' calls"
     }
+    fn key(&self) -> &'static str {
+        "es6_proxy_internal_set_calls"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

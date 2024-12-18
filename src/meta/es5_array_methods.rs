@@ -4,6 +4,9 @@ impl Meta for Es5ArrayMethods {
     fn name(&self) -> &'static str {
         "Array methods"
     }
+    fn key(&self) -> &'static str {
+        "es5_array_methods"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

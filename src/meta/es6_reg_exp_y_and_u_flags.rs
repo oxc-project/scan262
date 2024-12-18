@@ -4,6 +4,9 @@ impl Meta for Es6RegExpYAndUFlags {
     fn name(&self) -> &'static str {
         "RegExp \"y\" and \"u\" flags"
     }
+    fn key(&self) -> &'static str {
+        "es6_reg_exp_y_and_u_flags"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

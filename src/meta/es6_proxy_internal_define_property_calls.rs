@@ -4,6 +4,9 @@ impl Meta for Es6ProxyInternalDefinePropertyCalls {
     fn name(&self) -> &'static str {
         "Proxy, internal 'defineProperty' calls"
     }
+    fn key(&self) -> &'static str {
+        "es6_proxy_internal_define_property_calls"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

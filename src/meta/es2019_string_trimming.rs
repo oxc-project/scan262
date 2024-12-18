@@ -4,6 +4,9 @@ impl Meta for Es2019StringTrimming {
     fn name(&self) -> &'static str {
         "string trimming"
     }
+    fn key(&self) -> &'static str {
+        "es2019_string_trimming"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

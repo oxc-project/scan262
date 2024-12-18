@@ -4,6 +4,9 @@ impl Meta for Es2016ProxyEnumerateHandlerRemoved {
     fn name(&self) -> &'static str {
         "Proxy, \"enumerate\" handler removed"
     }
+    fn key(&self) -> &'static str {
+        "es2016_proxy_enumerate_handler_removed"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

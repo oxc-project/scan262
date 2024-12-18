@@ -4,6 +4,9 @@ impl Meta for Es6RegExpPrototypeCompile {
     fn name(&self) -> &'static str {
         "RegExp.prototype.compile"
     }
+    fn key(&self) -> &'static str {
+        "es6_reg_exp_prototype_compile"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

@@ -4,6 +4,9 @@ impl Meta for Es2022ErrorCauseProperty {
     fn name(&self) -> &'static str {
         "Error.cause property"
     }
+    fn key(&self) -> &'static str {
+        "es2022_error_cause_property"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

@@ -4,6 +4,9 @@ impl Meta for Es6ForOfLoops {
     fn name(&self) -> &'static str {
         "for..of loops"
     }
+    fn key(&self) -> &'static str {
+        "es6_for_of_loops"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

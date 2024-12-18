@@ -4,6 +4,9 @@ impl Meta for Es6WeakMap {
     fn name(&self) -> &'static str {
         "WeakMap"
     }
+    fn key(&self) -> &'static str {
+        "es6_weak_map"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

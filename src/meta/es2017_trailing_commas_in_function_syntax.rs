@@ -4,6 +4,9 @@ impl Meta for Es2017TrailingCommasInFunctionSyntax {
     fn name(&self) -> &'static str {
         "trailing commas in function syntax"
     }
+    fn key(&self) -> &'static str {
+        "es2017_trailing_commas_in_function_syntax"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

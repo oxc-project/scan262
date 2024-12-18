@@ -4,6 +4,9 @@ impl Meta for Es6MathMethods {
     fn name(&self) -> &'static str {
         "Math methods"
     }
+    fn key(&self) -> &'static str {
+        "es6_math_methods"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

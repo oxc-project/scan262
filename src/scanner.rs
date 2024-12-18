@@ -3,12 +3,12 @@ use std::path::PathBuf;
 use oxc::{
     allocator::Allocator,
     diagnostics::{DiagnosticService, Error},
-    parser::Parser,
+    parser::{ParseOptions, Parser},
     semantic::SemanticBuilder,
     span::SourceType,
 };
 
-use crate::{ctx::Ctx, features::FEATURES};
+use crate::{ctx::Ctx, Feature};
 
 pub struct Scanner {
     source_path: PathBuf,
@@ -20,10 +20,15 @@ impl Scanner {
         Self { source_path, source_text }
     }
 
-    pub fn scan(&self) -> Option<(PathBuf, Vec<Error>)> {
+    pub fn scan(&self, features: &[&dyn Feature]) -> Option<(PathBuf, Vec<Error>)> {
         let allocator = Allocator::default();
         let source_type = SourceType::from_path(&self.source_path).unwrap();
-        let ret = Parser::new(&allocator, &self.source_text, source_type).parse();
+        let ret = Parser::new(&allocator, &self.source_text, source_type)
+            .with_options(ParseOptions {
+                allow_return_outside_function: true,
+                ..ParseOptions::default()
+            })
+            .parse();
 
         if !ret.errors.is_empty() {
             return None;
@@ -33,7 +38,7 @@ impl Scanner {
         let mut ctx = Ctx::default();
 
         for node in semantic_ret.semantic.nodes() {
-            for feature in FEATURES {
+            for feature in features {
                 feature.test(node, &mut ctx);
             }
         }

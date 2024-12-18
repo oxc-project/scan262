@@ -4,6 +4,9 @@ impl Meta for Es6UpdatedIdentifierSyntax {
     fn name(&self) -> &'static str {
         "Updated identifier syntax"
     }
+    fn key(&self) -> &'static str {
+        "es6_updated_identifier_syntax"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

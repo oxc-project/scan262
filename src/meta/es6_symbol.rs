@@ -4,6 +4,9 @@ impl Meta for Es6Symbol {
     fn name(&self) -> &'static str {
         "Symbol"
     }
+    fn key(&self) -> &'static str {
+        "es6_symbol"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

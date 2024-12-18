@@ -4,6 +4,9 @@ impl Meta for Es5Miscellaneous {
     fn name(&self) -> &'static str {
         "Miscellaneous"
     }
+    fn key(&self) -> &'static str {
+        "es5_miscellaneous"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

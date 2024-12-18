@@ -4,6 +4,9 @@ impl Meta for Es6FunctionNameProperty {
     fn name(&self) -> &'static str {
         "function \"name\" property"
     }
+    fn key(&self) -> &'static str {
+        "es6_function_name_property"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

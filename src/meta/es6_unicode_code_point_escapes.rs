@@ -4,6 +4,9 @@ impl Meta for Es6UnicodeCodePointEscapes {
     fn name(&self) -> &'static str {
         "Unicode code point escapes"
     }
+    fn key(&self) -> &'static str {
+        "es6_unicode_code_point_escapes"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

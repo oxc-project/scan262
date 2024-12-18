@@ -4,6 +4,9 @@ impl Meta for Es2016ExponentiationOperator {
     fn name(&self) -> &'static str {
         "exponentiation (**) operator"
     }
+    fn key(&self) -> &'static str {
+        "es2016_exponentiation_operator"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

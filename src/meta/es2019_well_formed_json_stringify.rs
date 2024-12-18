@@ -4,6 +4,9 @@ impl Meta for Es2019WellFormedJsonStringify {
     fn name(&self) -> &'static str {
         "Well-formed JSON.stringify"
     }
+    fn key(&self) -> &'static str {
+        "es2019_well_formed_json_stringify"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

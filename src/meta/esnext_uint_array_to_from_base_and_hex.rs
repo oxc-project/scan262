@@ -4,6 +4,9 @@ impl Meta for EsnextUintArrayToFromBaseAndHex {
     fn name(&self) -> &'static str {
         "Uint8Array to/from base64 and hex"
     }
+    fn key(&self) -> &'static str {
+        "esnext_uint_array_to_from_base_and_hex"
+    }
     fn target(&self) -> &'static str {
         "esnext"
     }

@@ -4,6 +4,9 @@ impl Meta for Es5ImmutableGlobals {
     fn name(&self) -> &'static str {
         "Immutable globals"
     }
+    fn key(&self) -> &'static str {
+        "es5_immutable_globals"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

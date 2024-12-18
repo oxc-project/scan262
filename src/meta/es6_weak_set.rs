@@ -4,6 +4,9 @@ impl Meta for Es6WeakSet {
     fn name(&self) -> &'static str {
         "WeakSet"
     }
+    fn key(&self) -> &'static str {
+        "es6_weak_set"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

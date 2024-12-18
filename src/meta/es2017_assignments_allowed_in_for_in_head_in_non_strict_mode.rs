@@ -4,6 +4,9 @@ impl Meta for Es2017AssignmentsAllowedInForInHeadInNonStrictMode {
     fn name(&self) -> &'static str {
         "assignments allowed in for-in head in non-strict mode"
     }
+    fn key(&self) -> &'static str {
+        "es2017_assignments_allowed_in_for_in_head_in_non_strict_mode"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

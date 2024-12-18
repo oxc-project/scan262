@@ -4,6 +4,9 @@ impl Meta for Es2018AsynchronousIterators {
     fn name(&self) -> &'static str {
         "Asynchronous Iterators"
     }
+    fn key(&self) -> &'static str {
+        "es2018_asynchronous_iterators"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

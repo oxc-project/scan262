@@ -4,6 +4,9 @@ impl Meta for Es2018ObjectRestSpreadProperties {
     fn name(&self) -> &'static str {
         "object rest/spread properties"
     }
+    fn key(&self) -> &'static str {
+        "es2018_object_rest_spread_properties"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

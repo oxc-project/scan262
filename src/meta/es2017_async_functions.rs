@@ -4,6 +4,9 @@ impl Meta for Es2017AsyncFunctions {
     fn name(&self) -> &'static str {
         "async functions"
     }
+    fn key(&self) -> &'static str {
+        "es2017_async_functions"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

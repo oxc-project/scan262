@@ -4,6 +4,9 @@ impl Meta for Es6ArrayIsSubclassable {
     fn name(&self) -> &'static str {
         "Array is subclassable"
     }
+    fn key(&self) -> &'static str {
+        "es6_array_is_subclassable"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

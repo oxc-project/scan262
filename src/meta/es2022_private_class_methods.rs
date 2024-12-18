@@ -4,6 +4,9 @@ impl Meta for Es2022PrivateClassMethods {
     fn name(&self) -> &'static str {
         "private class methods"
     }
+    fn key(&self) -> &'static str {
+        "es2022_private_class_methods"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

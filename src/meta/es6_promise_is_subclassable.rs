@@ -4,6 +4,9 @@ impl Meta for Es6PromiseIsSubclassable {
     fn name(&self) -> &'static str {
         "Promise is subclassable"
     }
+    fn key(&self) -> &'static str {
+        "es6_promise_is_subclassable"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

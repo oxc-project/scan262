@@ -4,6 +4,9 @@ impl Meta for EsnextThrowExpressions {
     fn name(&self) -> &'static str {
         "throw expressions"
     }
+    fn key(&self) -> &'static str {
+        "esnext_throw_expressions"
+    }
     fn target(&self) -> &'static str {
         "esnext"
     }

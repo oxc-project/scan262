@@ -4,6 +4,9 @@ impl Meta for Es6TypedArrays {
     fn name(&self) -> &'static str {
         "typed arrays"
     }
+    fn key(&self) -> &'static str {
+        "es6_typed_arrays"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

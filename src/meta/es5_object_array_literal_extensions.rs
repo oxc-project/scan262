@@ -4,6 +4,9 @@ impl Meta for Es5ObjectArrayLiteralExtensions {
     fn name(&self) -> &'static str {
         "Object/array literal extensions"
     }
+    fn key(&self) -> &'static str {
+        "es5_object_array_literal_extensions"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

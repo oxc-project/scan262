@@ -4,6 +4,9 @@ impl Meta for Es2016NestedRestDestructuringDeclarations {
     fn name(&self) -> &'static str {
         "nested rest destructuring, declarations"
     }
+    fn key(&self) -> &'static str {
+        "es2016_nested_rest_destructuring_declarations"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

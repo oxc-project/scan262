@@ -4,6 +4,9 @@ impl Meta for EsnextArrayIsTemplateObject {
     fn name(&self) -> &'static str {
         "Array.isTemplateObject"
     }
+    fn key(&self) -> &'static str {
+        "esnext_array_is_template_object"
+    }
     fn target(&self) -> &'static str {
         "esnext"
     }

@@ -4,6 +4,9 @@ impl Meta for Es6RestParameters {
     fn name(&self) -> &'static str {
         "rest parameters"
     }
+    fn key(&self) -> &'static str {
+        "es6_rest_parameters"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

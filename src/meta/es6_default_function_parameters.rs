@@ -4,6 +4,9 @@ impl Meta for Es6DefaultFunctionParameters {
     fn name(&self) -> &'static str {
         "default function parameters"
     }
+    fn key(&self) -> &'static str {
+        "es6_default_function_parameters"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

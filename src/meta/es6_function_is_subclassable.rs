@@ -4,6 +4,9 @@ impl Meta for Es6FunctionIsSubclassable {
     fn name(&self) -> &'static str {
         "Function is subclassable"
     }
+    fn key(&self) -> &'static str {
+        "es6_function_is_subclassable"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

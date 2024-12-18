@@ -4,6 +4,9 @@ impl Meta for Es2024ArrayBufferPrototypeTransfer {
     fn name(&self) -> &'static str {
         "ArrayBuffer.prototype.transfer"
     }
+    fn key(&self) -> &'static str {
+        "es2024_array_buffer_prototype_transfer"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

@@ -4,6 +4,9 @@ impl Meta for Es2022InstanceClassFields {
     fn name(&self) -> &'static str {
         "instance class fields"
     }
+    fn key(&self) -> &'static str {
+        "es2022_instance_class_fields"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

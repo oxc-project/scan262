@@ -4,6 +4,9 @@ impl Meta for Es5NumberMethods {
     fn name(&self) -> &'static str {
         "Number methods"
     }
+    fn key(&self) -> &'static str {
+        "es5_number_methods"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

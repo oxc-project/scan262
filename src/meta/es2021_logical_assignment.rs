@@ -4,6 +4,9 @@ impl Meta for Es2021LogicalAssignment {
     fn name(&self) -> &'static str {
         "Logical Assignment"
     }
+    fn key(&self) -> &'static str {
+        "es2021_logical_assignment"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

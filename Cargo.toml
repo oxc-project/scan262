@@ -53,9 +53,22 @@ infinite_loop = "warn"
 [lints]
 workspace = true
 
+[lib]
+test = false
+doctest = false
+
+[[bin]]
+name = "scan262"
+path = "src/main.rs"
+test = false
+doctest = false
+
 [dependencies]
 oxc = { version = "0.41.0", features = ["semantic"] }
 rayon = "1.10.0"
+
+[dev-dependencies]
+insta = "1.41.1"
 
 [profile.release]
 # Configurations explicitly listed here for clarity.

@@ -4,6 +4,9 @@ impl Meta for Es6DestructuringDeclarations {
     fn name(&self) -> &'static str {
         "destructuring, declarations"
     }
+    fn key(&self) -> &'static str {
+        "es6_destructuring_declarations"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

@@ -4,6 +4,9 @@ impl Meta for Es5ObjectStaticMethods {
     fn name(&self) -> &'static str {
         "Object static methods"
     }
+    fn key(&self) -> &'static str {
+        "es5_object_static_methods"
+    }
     fn target(&self) -> &'static str {
         "es5"
     }

@@ -4,6 +4,9 @@ impl Meta for Es2018ProxyOwnKeysHandlerDuplicateKeysForNonExtensibleTargets {
     fn name(&self) -> &'static str {
         "Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets"
     }
+    fn key(&self) -> &'static str {
+        "es2018_proxy_own_keys_handler_duplicate_keys_for_non_extensible_targets"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

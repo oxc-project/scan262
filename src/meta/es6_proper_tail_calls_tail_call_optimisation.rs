@@ -4,6 +4,9 @@ impl Meta for Es6ProperTailCallsTailCallOptimisation {
     fn name(&self) -> &'static str {
         "proper tail calls (tail call optimisation)"
     }
+    fn key(&self) -> &'static str {
+        "es6_proper_tail_calls_tail_call_optimisation"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

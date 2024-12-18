@@ -4,6 +4,9 @@ impl Meta for Es2018SDotAllFlagForRegularExpressions {
     fn name(&self) -> &'static str {
         "s (dotAll) flag for regular expressions"
     }
+    fn key(&self) -> &'static str {
+        "es2018_s_dot_all_flag_for_regular_expressions"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

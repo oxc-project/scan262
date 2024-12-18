@@ -4,6 +4,9 @@ impl Meta for Es6StringStaticMethods {
     fn name(&self) -> &'static str {
         "String static methods"
     }
+    fn key(&self) -> &'static str {
+        "es6_string_static_methods"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

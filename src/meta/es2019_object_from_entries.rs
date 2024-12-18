@@ -4,6 +4,9 @@ impl Meta for Es2019ObjectFromEntries {
     fn name(&self) -> &'static str {
         "Object.fromEntries"
     }
+    fn key(&self) -> &'static str {
+        "es2019_object_from_entries"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

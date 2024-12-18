@@ -4,6 +4,9 @@ impl Meta for Es2019FunctionPrototypeToStringRevision {
     fn name(&self) -> &'static str {
         "Function.prototype.toString revision"
     }
+    fn key(&self) -> &'static str {
+        "es2019_function_prototype_to_string_revision"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

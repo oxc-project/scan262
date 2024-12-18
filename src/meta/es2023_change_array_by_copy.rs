@@ -4,6 +4,9 @@ impl Meta for Es2023ChangeArrayByCopy {
     fn name(&self) -> &'static str {
         "Change Array by copy"
     }
+    fn key(&self) -> &'static str {
+        "es2023_change_array_by_copy"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

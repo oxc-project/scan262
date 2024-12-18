@@ -4,6 +4,9 @@ impl Meta for Es2021WeakReferences {
     fn name(&self) -> &'static str {
         "WeakReferences"
     }
+    fn key(&self) -> &'static str {
+        "es2021_weak_references"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

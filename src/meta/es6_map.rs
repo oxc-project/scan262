@@ -4,6 +4,9 @@ impl Meta for Es6Map {
     fn name(&self) -> &'static str {
         "Map"
     }
+    fn key(&self) -> &'static str {
+        "es6_map"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

@@ -1,9 +1,8 @@
-#![expect(dead_code)]
-
 use oxc::semantic::AstNode;
 
 use crate::ctx::Ctx;
 
+#[derive(Debug)]
 pub struct Subtest {
     pub name: &'static str,
     pub exec: &'static str,
@@ -11,6 +10,7 @@ pub struct Subtest {
 
 pub trait Meta {
     fn name(&self) -> &'static str;
+    fn key(&self) -> &'static str;
     fn target(&self) -> &'static str;
     fn category(&self) -> &'static str;
     fn spec(&self) -> &'static str;

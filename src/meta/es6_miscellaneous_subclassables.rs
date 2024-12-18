@@ -4,6 +4,9 @@ impl Meta for Es6MiscellaneousSubclassables {
     fn name(&self) -> &'static str {
         "miscellaneous subclassables"
     }
+    fn key(&self) -> &'static str {
+        "es6_miscellaneous_subclassables"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

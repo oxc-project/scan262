@@ -4,6 +4,9 @@ impl Meta for Es2016GeneratorThrowCaughtByInnerGenerator {
     fn name(&self) -> &'static str {
         "generator throw() caught by inner generator"
     }
+    fn key(&self) -> &'static str {
+        "es2016_generator_throw_caught_by_inner_generator"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

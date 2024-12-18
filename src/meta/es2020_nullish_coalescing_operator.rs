@@ -4,6 +4,9 @@ impl Meta for Es2020NullishCoalescingOperator {
     fn name(&self) -> &'static str {
         "nullish coalescing operator (??)"
     }
+    fn key(&self) -> &'static str {
+        "es2020_nullish_coalescing_operator"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

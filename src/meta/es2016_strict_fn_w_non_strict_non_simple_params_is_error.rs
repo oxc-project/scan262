@@ -4,6 +4,9 @@ impl Meta for Es2016StrictFnWNonStrictNonSimpleParamsIsError {
     fn name(&self) -> &'static str {
         "strict fn w/ non-strict non-simple params is error"
     }
+    fn key(&self) -> &'static str {
+        "es2016_strict_fn_w_non_strict_non_simple_params_is_error"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

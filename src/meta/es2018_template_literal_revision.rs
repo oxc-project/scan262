@@ -4,6 +4,9 @@ impl Meta for Es2018TemplateLiteralRevision {
     fn name(&self) -> &'static str {
         "template literal revision"
     }
+    fn key(&self) -> &'static str {
+        "es2018_template_literal_revision"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

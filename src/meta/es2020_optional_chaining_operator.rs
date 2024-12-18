@@ -4,6 +4,9 @@ impl Meta for Es2020OptionalChainingOperator {
     fn name(&self) -> &'static str {
         "optional chaining operator (?.)"
     }
+    fn key(&self) -> &'static str {
+        "es2020_optional_chaining_operator"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

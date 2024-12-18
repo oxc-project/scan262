@@ -4,6 +4,9 @@ impl Meta for Es2025DuplicateNamedCapturingGroups {
     fn name(&self) -> &'static str {
         "Duplicate named capturing groups"
     }
+    fn key(&self) -> &'static str {
+        "es2025_duplicate_named_capturing_groups"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

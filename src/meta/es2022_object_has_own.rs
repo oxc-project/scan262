@@ -4,6 +4,9 @@ impl Meta for Es2022ObjectHasOwn {
     fn name(&self) -> &'static str {
         "Object.hasOwn"
     }
+    fn key(&self) -> &'static str {
+        "es2022_object_has_own"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

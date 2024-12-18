@@ -4,6 +4,9 @@ impl Meta for Es2018RegExpLookbehindAssertions {
     fn name(&self) -> &'static str {
         "RegExp Lookbehind Assertions"
     }
+    fn key(&self) -> &'static str {
+        "es2018_reg_exp_lookbehind_assertions"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

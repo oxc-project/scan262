@@ -4,6 +4,9 @@ impl Meta for Es6DestructuringAssignment {
     fn name(&self) -> &'static str {
         "destructuring, assignment"
     }
+    fn key(&self) -> &'static str {
+        "es6_destructuring_assignment"
+    }
     fn target(&self) -> &'static str {
         "es6"
     }

@@ -4,6 +4,9 @@ impl Meta for Es2017ProxyInternalCallsGetterSetterMethods {
     fn name(&self) -> &'static str {
         "Proxy internal calls, getter/setter methods"
     }
+    fn key(&self) -> &'static str {
+        "es2017_proxy_internal_calls_getter_setter_methods"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }

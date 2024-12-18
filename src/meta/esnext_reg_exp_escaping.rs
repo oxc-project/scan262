@@ -4,6 +4,9 @@ impl Meta for EsnextRegExpEscaping {
     fn name(&self) -> &'static str {
         "RegExp Escaping"
     }
+    fn key(&self) -> &'static str {
+        "esnext_reg_exp_escaping"
+    }
     fn target(&self) -> &'static str {
         "esnext"
     }

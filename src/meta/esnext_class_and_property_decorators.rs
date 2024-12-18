@@ -4,6 +4,9 @@ impl Meta for EsnextClassAndPropertyDecorators {
     fn name(&self) -> &'static str {
         "Class and Property Decorators"
     }
+    fn key(&self) -> &'static str {
+        "esnext_class_and_property_decorators"
+    }
     fn target(&self) -> &'static str {
         "esnext"
     }

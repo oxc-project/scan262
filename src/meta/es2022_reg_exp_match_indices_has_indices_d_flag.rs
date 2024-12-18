@@ -4,6 +4,9 @@ impl Meta for Es2022RegExpMatchIndicesHasIndicesDFlag {
     fn name(&self) -> &'static str {
         "RegExp Match Indices (`hasIndices` / `d` flag)"
     }
+    fn key(&self) -> &'static str {
+        "es2022_reg_exp_match_indices_has_indices_d_flag"
+    }
     fn target(&self) -> &'static str {
         "es2016"
     }
