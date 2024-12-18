@@ -13,7 +13,7 @@ fn test() {
     let mut diagnostics = vec![];
     for feature in features {
         let mut passed = true;
-        if !feature.spec().is_empty() {
+        if !feature.exec().is_empty() {
             let scanner = Scanner::new(path.clone(), feature.exec().to_string());
             let d = scanner.scan(&[feature]).diagnostics.1;
             if d.is_empty() {

@@ -75,8 +75,6 @@ snapshot_kind: text
  3 | return O !== spread && (O.a + O.b + O.c) === 6;
    `----
 
-  x Failed: object rest/spread properties
-
   x Failed: Promise.prototype.finally
 
   x Failed: Proxy "ownKeys" handler, duplicate keys for non-extensible targets
@@ -175,7 +173,11 @@ snapshot_kind: text
 
   x Failed: Date methods
 
+  x Failed: Function.prototype.bind
+
   x Failed: Immutable globals
+
+  x Failed: JSON
 
   x Failed: Miscellaneous
 
