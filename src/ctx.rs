@@ -4,7 +4,7 @@ use crate::feature::Feature;
 
 #[derive(Default)]
 pub struct Ctx {
-    pub(crate) diagnostics: Vec<OxcDiagnostic>,
+    pub diagnostics: Vec<OxcDiagnostic>,
 }
 
 impl Ctx {

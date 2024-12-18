@@ -6,12 +6,14 @@ use std::{
     sync::{Arc, Mutex},
 };
 
-use oxc::{diagnostics::DiagnosticService, span::VALID_EXTENSIONS};
+use oxc::diagnostics::DiagnosticService;
 use rayon::iter::IntoParallelRefIterator;
 use rayon::prelude::*;
 use walkdir::WalkDir;
 
 use scan262::{command, Scanner, FEATURES};
+
+pub const VALID_EXTENSIONS: [&str; 3] = ["js", "mjs", "cjs"];
 
 fn get_paths(path: &Path) -> Vec<PathBuf> {
     WalkDir::new(path)
@@ -21,7 +23,8 @@ fn get_paths(path: &Path) -> Vec<PathBuf> {
         .filter(|e| {
             e.path()
                 .extension()
-                .is_some_and(|ext| VALID_EXTENSIONS.contains(&ext.to_string_lossy().as_ref()))
+                .and_then(|ext| ext.to_str())
+                .is_some_and(|ext| VALID_EXTENSIONS.contains(&ext))
         })
         .map(|e| e.path().to_path_buf())
         .collect::<Vec<_>>()
