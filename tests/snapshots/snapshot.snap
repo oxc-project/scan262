@@ -4,13 +4,11 @@ snapshot_kind: text
 ---
   x Failed: Array.prototype.includes
 
-
   ! es2016: exponentiation (**) operator
    ,-[test.js:1:8]
  1 | return 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;
    :        ^^^^^^
    `----
-
 
   ! es2016: exponentiation (**) operator
    ,-[test.js:1:26]
@@ -18,70 +16,49 @@ snapshot_kind: text
    :                          ^^^^^^
    `----
 
-
   ! es2016: exponentiation (**) operator
    ,-[test.js:1:45]
  1 | return 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;
    :                                             ^^^^^^^^^
    `----
 
-
   x Failed: exponentiation (**) operator
-
 
   x Failed: generator functions can't be used with "new"
 
-
   x Failed: generator throw() caught by inner generator
-
 
   x Failed: nested rest destructuring, declarations
 
-
   x Failed: nested rest destructuring, parameters
-
 
   x Failed: Proxy, "enumerate" handler removed
 
-
   x Failed: Proxy internal calls, Array.prototype.includes
-
 
   x Failed: strict fn w/ non-strict non-simple params is error
 
-
   x Failed: arguments.caller removed
-
 
   x Failed: assignments allowed in for-in head in non-strict mode
 
-
   x Failed: async functions
-
 
   x Failed: Object.prototype getter/setter methods
 
-
   x Failed: Object static methods
-
 
   x Failed: Proxy internal calls, getter/setter methods
 
-
   x Failed: RegExp "u" flag, case folding
-
 
   x Failed: shared memory and atomics
 
-
   x Failed: String padding
-
 
   x Failed: trailing commas in function syntax
 
-
   x Failed: Asynchronous Iterators
-
 
   ! es2016: object rest/spread properties
    ,-[test.js:1:10]
@@ -89,7 +66,6 @@ snapshot_kind: text
    :          ^^^^^^^
  2 | return a === 1 && rest.a === void undefined && rest.b === 2 && rest.c === 3;
    `----
-
 
   ! es2016: object rest/spread properties
    ,-[test.js:2:17]
@@ -99,395 +75,264 @@ snapshot_kind: text
  3 | return O !== spread && (O.a + O.b + O.c) === 6;
    `----
 
-
   x Failed: object rest/spread properties
-
 
   x Failed: Promise.prototype.finally
 
-
   x Failed: Proxy "ownKeys" handler, duplicate keys for non-extensible targets
-
 
   x Failed: RegExp Lookbehind Assertions
 
-
   x Failed: RegExp named capture groups
-
 
   x Failed: RegExp Unicode Property Escapes
 
-
   x Failed: s (dotAll) flag for regular expressions
-
 
   x Failed: template literal revision
 
-
   x Failed: Array.prototype.{flat, flatMap}
-
 
   x Failed: Function.prototype.toString revision
 
-
   x Failed: JSON superset
-
 
   x Failed: Object.fromEntries
 
-
   x Failed: optional catch binding
-
 
   x Failed: string trimming
 
-
   x Failed: Symbol.prototype.description
-
 
   x Failed: Well-formed JSON.stringify
 
-
   x Failed: BigInt
-
 
   x Failed: globalThis
 
-
   x Failed: nullish coalescing operator (??)
-
 
   x Failed: optional chaining operator (?.)
 
-
   x Failed: Promise.allSettled
-
 
   x Failed: String.prototype.matchAll
 
-
   x Failed: Logical Assignment
-
 
   x Failed: numeric separators
 
-
   x Failed: Promise.any
-
 
   x Failed: String.prototype.replaceAll
 
-
   x Failed: WeakReferences
-
 
   x Failed: .at() method on the built-in indexables
 
-
   x Failed: Class static initialization blocks
-
 
   x Failed: Ergonomic brand checks for private fields
 
-
   x Failed: Error.cause property
-
 
   x Failed: instance class fields
 
-
   x Failed: Object.hasOwn
-
 
   x Failed: private class methods
 
-
   x Failed: RegExp Match Indices (`hasIndices` / `d` flag)
-
 
   x Failed: static class fields
 
-
   x Failed: Array find from last
-
 
   x Failed: Change Array by copy
 
-
   x Failed: Hashbang Grammar
-
 
   x Failed: ArrayBuffer.prototype.transfer
 
-
   x Failed: Array Grouping
-
 
   x Failed: Promise.withResolvers
 
-
   x Failed: RegExp `v` flag
-
 
   x Failed: Duplicate named capturing groups
 
-
   x Failed: Iterator Helpers
-
 
   x Failed: Promise.try
 
-
   x Failed: RegExp Pattern Modifiers
-
 
   x Failed: Set methods
 
-
   x Failed: Array methods
-
 
   x Failed: Date methods
 
-
   x Failed: Immutable globals
-
 
   x Failed: Miscellaneous
 
-
   x Failed: Number methods
-
 
   x Failed: Object/array literal extensions
 
-
   x Failed: Object static methods
-
 
   x Failed: Strict mode
 
-
   x Failed: String properties and methods
-
 
   x Failed: Array is subclassable
 
-
   x Failed: Array.prototype methods
-
 
   x Failed: Array static methods
 
-
   x Failed: arrow functions
-
 
   x Failed: block-level function declaration
 
-
   x Failed: class
-
 
   x Failed: const
 
-
   x Failed: Date.prototype[Symbol.toPrimitive]
-
 
   x Failed: default function parameters
 
-
   x Failed: destructuring, assignment
-
 
   x Failed: destructuring, declarations
 
-
   x Failed: destructuring, parameters
-
 
   x Failed: for..of loops
 
-
   x Failed: Function is subclassable
-
 
   x Failed: function "name" property
 
-
   x Failed: generators
-
 
   x Failed: HTML-style comments
 
-
   x Failed: let
-
 
   x Failed: Map
 
-
   x Failed: Math methods
-
 
   x Failed: miscellaneous
 
-
   x Failed: miscellaneous subclassables
-
 
   x Failed: new.target
 
-
   x Failed: non-strict function semantics
-
 
   x Failed: Number properties
 
-
   x Failed: object literal extensions
-
 
   x Failed: Object.prototype.__proto__
 
-
   x Failed: Object static methods
-
 
   x Failed: Object static methods accept primitives
 
-
   x Failed: octal and binary literals
-
 
   x Failed: own property order
 
-
   x Failed: Promise
-
 
   x Failed: Promise is subclassable
 
-
   x Failed: proper tail calls (tail call optimisation)
-
 
   x Failed: __proto__ in object literals
 
-
   x Failed: prototype of bound functions
-
 
   x Failed: Proxy
 
-
   x Failed: Proxy, internal 'defineProperty' calls
-
 
   x Failed: Proxy, internal 'deleteProperty' calls
 
-
   x Failed: Proxy, internal 'get' calls
-
 
   x Failed: Proxy, internal 'getOwnPropertyDescriptor' calls
 
-
   x Failed: Proxy, internal 'ownKeys' calls
-
 
   x Failed: Proxy, internal 'set' calls
 
-
   x Failed: Reflect
-
 
   x Failed: RegExp is subclassable
 
-
   x Failed: RegExp.prototype.compile
-
 
   x Failed: RegExp.prototype properties
 
-
   x Failed: RegExp syntax extensions
-
 
   x Failed: RegExp "y" and "u" flags
 
-
   x Failed: rest parameters
-
 
   x Failed: Set
 
-
   x Failed: spread syntax for iterable objects
-
 
   x Failed: String.prototype HTML methods
 
-
   x Failed: String.prototype methods
-
 
   x Failed: String static methods
 
-
   x Failed: super
-
 
   x Failed: Symbol
 
-
   x Failed: template literals
-
 
   x Failed: typed arrays
 
-
   x Failed: Unicode code point escapes
-
 
   x Failed: Updated identifier syntax
 
-
   x Failed: WeakMap
-
 
   x Failed: WeakSet
 
-
   x Failed: well-known symbols
-
 
   x Failed: Array.isTemplateObject
 
-
   x Failed: Async Iterator Helpers
-
 
   x Failed: Class and Property Decorators
 
-
   x Failed: Generator function.sent Meta Property
-
 
   x Failed: Legacy RegExp features in JavaScript
 
-
   x Failed: Map.prototype.upsert
-
 
   x Failed: RegExp Escaping
 
-
   x Failed: ShadowRealm
 
-
   x Failed: throw expressions
-
 
   x Failed: Uint8Array to/from base64 and hex

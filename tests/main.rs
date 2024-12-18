@@ -35,7 +35,7 @@ fn test() {
     }
 
     let snapshot = diagnostics.into_iter().fold(String::new(), |mut w, d| {
-        writeln!(w, "{d:?}").unwrap();
+        write!(w, "{d:?}").unwrap();
         w
     });
 
