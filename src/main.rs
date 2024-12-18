@@ -36,7 +36,7 @@ fn main() {
         command.paths.iter().flat_map(|p| get_paths(p)).collect()
     };
 
-    let mut diagnostic_service = DiagnosticService::default();
+    let mut diagnostic_service = DiagnosticService::default().with_quiet(command.quiet);
     let paths_len = paths.len();
     let (tx_stats, rx_stats) = mpsc::channel::<Vec<usize>>();
 
