@@ -155,7 +155,103 @@ snapshot_kind: text
    :         ^^^^^^^^^
    `----
 
-  x Failed: optional chaining operator (?.)
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:3:8]
+ 2 | var bar = null;
+ 3 | return foo?.baz === 42 && bar?.baz === void undefined;
+   :        ^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:3:27]
+ 2 | var bar = null;
+ 3 | return foo?.baz === 42 && bar?.baz === void undefined;
+   :                           ^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:3:8]
+ 2 | var bar = null;
+ 3 | return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
+   :        ^^^^^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:3:31]
+ 2 | var bar = null;
+ 3 | return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
+   :                               ^^^^^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:3:8]
+ 2 | var bar = null;
+ 3 | return foo?.baz() === 42 && bar?.baz() === void undefined;
+   :        ^^^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:3:29]
+ 2 | var bar = null;
+ 3 | return foo?.baz() === 42 && bar?.baz() === void undefined;
+   :                             ^^^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:5:8]
+ 4 | var n;
+ 5 | return foo.baz?.() === 42 && bar.baz?.() === void undefined && baz?.() === 42 && n?.() === void undefined;
+   :        ^^^^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:5:30]
+ 4 | var n;
+ 5 | return foo.baz?.() === 42 && bar.baz?.() === void undefined && baz?.() === 42 && n?.() === void undefined;
+   :                              ^^^^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:5:64]
+ 4 | var n;
+ 5 | return foo.baz?.() === 42 && bar.baz?.() === void undefined && baz?.() === 42 && n?.() === void undefined;
+   :                                                                ^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:5:82]
+ 4 | var n;
+ 5 | return foo.baz?.() === 42 && bar.baz?.() === void undefined && baz?.() === 42 && n?.() === void undefined;
+   :                                                                                  ^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:5:8]
+ 4 | 
+ 5 | return fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;
+   :        ^^^^^^^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:5:45]
+ 4 | 
+ 5 | return fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;
+   :                                             ^^^^^^^^^^^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:5:86]
+ 4 | 
+ 5 | return fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;
+   :                                                                                      ^^^^^^^^^^^^^^^^^^^^
+   `----
+
+  ! es2016: optional chaining operator (?.)
+   ,-[test.js:5:129]
+ 4 | 
+ 5 | return fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;
+   :                                                                                                                                 ^^^^^^^^^^^^^^^^^^^
+   `----
 
   x Failed: Promise.allSettled
 
