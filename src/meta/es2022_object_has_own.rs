@@ -28,9 +28,9 @@ impl Meta for Es2022ObjectHasOwn {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "Basic functionality", exec :
-            "return Object.hasOwn({ x: 2 }, \"x\") === true;", }, Subtest { name :
+            "return Object.hasOwn({ x: 2 }, \"x\") === true;" }, Subtest { name :
             "ToObject called before ToPropertyKey", exec :
-            "var ok = !!Object.hasOwn;\ntry {\n  Object.hasOwn(null, { toString: function () { ok = false } });\n  return false;\n} catch (e) {\n  return ok;\n}",
+            "var ok = !!Object.hasOwn;\ntry {\n  Object.hasOwn(null, { toString: function () { ok = false } });\n  return false;\n} catch (e) {\n  return ok;\n}"
             },
         ]
     }

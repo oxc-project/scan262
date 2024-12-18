@@ -28,11 +28,11 @@ impl Meta for Es5DateMethods {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "Date.prototype.toISOString", exec :
-            "function () {\nreturn typeof Date.prototype.toISOString === 'function';\n    }",
+            "function () {\nreturn typeof Date.prototype.toISOString === 'function';\n    }"
             }, Subtest { name : "Date.now", exec :
-            "function () {\nreturn typeof Date.now === 'function';\n    }", }, Subtest {
+            "function () {\nreturn typeof Date.now === 'function';\n    }" }, Subtest {
             name : "Date.prototype.toJSON", exec :
-            "function () {\ntry {\n  return Date.prototype.toJSON.call(new Date(NaN)) === null;\n} catch (e) {\n  return false;\n}\n    }",
+            "function () {\ntry {\n  return Date.prototype.toJSON.call(new Date(NaN)) === null;\n} catch (e) {\n  return false;\n}\n    }"
             },
         ]
     }

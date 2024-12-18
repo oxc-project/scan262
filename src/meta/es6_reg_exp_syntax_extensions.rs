@@ -28,21 +28,21 @@ impl Meta for Es6RegExpSyntaxExtensions {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "hyphens in character sets", exec :
-            "return /[\\w-_]/.exec(\"-\")[0] === \"-\";", }, Subtest { name :
+            "return /[\\w-_]/.exec(\"-\")[0] === \"-\";" }, Subtest { name :
             "invalid character escapes", exec :
-            "return /\\z/.exec(\"\\\\z\")[0] === \"z\"\n  && /[\\z]/.exec(\"[\\\\z]\")[0] === \"z\";",
+            "return /\\z/.exec(\"\\\\z\")[0] === \"z\"\n  && /[\\z]/.exec(\"[\\\\z]\")[0] === \"z\";"
             }, Subtest { name : "invalid control-character escapes", exec :
-            "return /\\c2/.exec(\"\\\\c2\")[0] === \"\\\\c2\";", }, Subtest { name :
+            "return /\\c2/.exec(\"\\\\c2\")[0] === \"\\\\c2\";" }, Subtest { name :
             "invalid Unicode escapes", exec :
-            "return /\\u1/.exec(\"u1\")[0] === \"u1\"\n  && /[\\u1]/.exec(\"u\")[0] === \"u\";",
+            "return /\\u1/.exec(\"u1\")[0] === \"u1\"\n  && /[\\u1]/.exec(\"u\")[0] === \"u\";"
             }, Subtest { name : "invalid hexadecimal escapes", exec :
-            "return /\\x1/.exec(\"x1\")[0] === \"x1\"\n  && /[\\x1]/.exec(\"x\")[0] === \"x\";",
+            "return /\\x1/.exec(\"x1\")[0] === \"x1\"\n  && /[\\x1]/.exec(\"x\")[0] === \"x\";"
             }, Subtest { name : "incomplete patterns and quantifiers", exec :
-            "return /x{1/.exec(\"x{1\")[0] === \"x{1\"\n  && /x]1/.exec(\"x]1\")[0] === \"x]1\";",
+            "return /x{1/.exec(\"x{1\")[0] === \"x{1\"\n  && /x]1/.exec(\"x]1\")[0] === \"x]1\";"
             }, Subtest { name : "octal escape sequences", exec :
-            "return /\\041/.exec(\"!\")[0] === \"!\"\n  && /[\\041]/.exec(\"!\")[0] === \"!\";",
+            "return /\\041/.exec(\"!\")[0] === \"!\"\n  && /[\\041]/.exec(\"!\")[0] === \"!\";"
             }, Subtest { name : "invalid backreferences become octal escapes", exec :
-            "return /\\41/.exec(\"!\")[0] === \"!\"\n  && /[\\41]/.exec(\"!\")[0] === \"!\";",
+            "return /\\41/.exec(\"!\")[0] === \"!\"\n  && /[\\41]/.exec(\"!\")[0] === \"!\";"
             },
         ]
     }

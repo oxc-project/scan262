@@ -28,21 +28,21 @@ impl Meta for Es6NumberProperties {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "Number.isFinite", exec :
-            "return typeof Number.isFinite === 'function';", }, Subtest { name :
-            "Number.isInteger", exec : "return typeof Number.isInteger === 'function';",
+            "return typeof Number.isFinite === 'function';" }, Subtest { name :
+            "Number.isInteger", exec : "return typeof Number.isInteger === 'function';"
             }, Subtest { name : "Number.isSafeInteger", exec :
-            "return typeof Number.isSafeInteger === 'function';", }, Subtest { name :
-            "Number.isNaN", exec : "return typeof Number.isNaN === 'function';", },
+            "return typeof Number.isSafeInteger === 'function';" }, Subtest { name :
+            "Number.isNaN", exec : "return typeof Number.isNaN === 'function';" },
             Subtest { name : "Number.parseFloat", exec :
-            "var actualGlobal = Function('return this')();\nreturn typeof Number.parseFloat === 'function'\n  && Number.parseFloat === actualGlobal.parseFloat;",
+            "var actualGlobal = Function('return this')();\nreturn typeof Number.parseFloat === 'function'\n  && Number.parseFloat === actualGlobal.parseFloat;"
             }, Subtest { name : "Number.parseInt", exec :
-            "var actualGlobal = Function('return this')();\nreturn typeof Number.parseInt === 'function'\n  && Number.parseInt === actualGlobal.parseInt;",
+            "var actualGlobal = Function('return this')();\nreturn typeof Number.parseInt === 'function'\n  && Number.parseInt === actualGlobal.parseInt;"
             }, Subtest { name : "Number.EPSILON", exec :
-            "return typeof Number.EPSILON === 'number';", }, Subtest { name :
+            "return typeof Number.EPSILON === 'number';" }, Subtest { name :
             "Number.MIN_SAFE_INTEGER", exec :
-            "return typeof Number.MIN_SAFE_INTEGER === 'number';", }, Subtest { name :
+            "return typeof Number.MIN_SAFE_INTEGER === 'number';" }, Subtest { name :
             "Number.MAX_SAFE_INTEGER", exec :
-            "return typeof Number.MAX_SAFE_INTEGER === 'number';", },
+            "return typeof Number.MAX_SAFE_INTEGER === 'number';" },
         ]
     }
 }

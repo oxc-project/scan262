@@ -28,9 +28,9 @@ impl Meta for Es2021WeakReferences {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "WeakRef minimal support", exec :
-            "var O = {};\nvar weakref = new WeakRef(O);\nreturn weakref.deref() === O;",
+            "var O = {};\nvar weakref = new WeakRef(O);\nreturn weakref.deref() === O;"
             }, Subtest { name : "FinalizationRegistry minimal support", exec :
-            "var fr = new FinalizationRegistry(function () {});\nreturn Object.getPrototypeOf(fr) === FinalizationRegistry.prototype;",
+            "var fr = new FinalizationRegistry(function () {});\nreturn Object.getPrototypeOf(fr) === FinalizationRegistry.prototype;"
             },
         ]
     }

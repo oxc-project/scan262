@@ -28,9 +28,9 @@ impl Meta for Es6NewTarget {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "in constructors", exec :
-            "var passed = false;\nnew function f() {\n  passed = (new.target === f);\n}();\n(function() {\n  passed &= (new.target === void undefined);\n}());\nreturn passed;",
+            "var passed = false;\nnew function f() {\n  passed = (new.target === f);\n}();\n(function() {\n  passed &= (new.target === void undefined);\n}());\nreturn passed;"
             }, Subtest { name : "assignment is an early error", exec :
-            "var passed = false;\nnew function f() {\n  passed = (new.target === f);\n}();\n\ntry {\n  Function(\"new.target = function(){};\");\n} catch(e) {\n  return passed;\n}",
+            "var passed = false;\nnew function f() {\n  passed = (new.target === f);\n}();\n\ntry {\n  Function(\"new.target = function(){};\");\n} catch(e) {\n  return passed;\n}"
             },
         ]
     }

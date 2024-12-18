@@ -28,9 +28,9 @@ impl Meta for Es6StringStaticMethods {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "String.raw", exec :
-            "return typeof String.raw === 'function';", }, Subtest { name :
+            "return typeof String.raw === 'function';" }, Subtest { name :
             "String.fromCodePoint", exec :
-            "return typeof String.fromCodePoint === 'function';", },
+            "return typeof String.fromCodePoint === 'function';" },
         ]
     }
 }

@@ -28,10 +28,10 @@ impl Meta for Es6UpdatedIdentifierSyntax {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "var ⸯ;", exec :
-            "try {\n  eval('var ⸯ');\n} catch(e) {\n  return true;\n}", }, Subtest {
-            name : "var 𐋀;", exec : "var 𐋀;\nreturn true;", }, Subtest { name :
+            "try {\n  eval('var ⸯ');\n} catch(e) {\n  return true;\n}" }, Subtest {
+            name : "var 𐋀;", exec : "var 𐋀;\nreturn true;" }, Subtest { name :
             "no escaped reserved words as identifiers", exec :
-            "var \\u0061;\ntry {\n  eval('var v\\\\u0061r');\n} catch(e) {\n  return true;\n}",
+            "var \\u0061;\ntry {\n  eval('var v\\\\u0061r');\n} catch(e) {\n  return true;\n}"
             },
         ]
     }

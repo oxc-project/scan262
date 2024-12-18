@@ -28,9 +28,9 @@ impl Meta for Es6ProperTailCallsTailCallOptimisation {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "direct recursion", exec :
-            "\"use strict\";\nreturn (function f(n){\n  if (n <= 0) {\n    return  \"foo\";\n  }\n  return f(n - 1);\n}(1e6)) === \"foo\";",
+            "\"use strict\";\nreturn (function f(n){\n  if (n <= 0) {\n    return  \"foo\";\n  }\n  return f(n - 1);\n}(1e6)) === \"foo\";"
             }, Subtest { name : "mutual recursion", exec :
-            "\"use strict\";\nfunction f(n){\n  if (n <= 0) {\n    return  \"foo\";\n  }\n  return g(n - 1);\n}\nfunction g(n){\n  if (n <= 0) {\n    return  \"bar\";\n  }\n  return f(n - 1);\n}\nreturn f(1e6) === \"foo\" && f(1e6+1) === \"bar\";",
+            "\"use strict\";\nfunction f(n){\n  if (n <= 0) {\n    return  \"foo\";\n  }\n  return g(n - 1);\n}\nfunction g(n){\n  if (n <= 0) {\n    return  \"bar\";\n  }\n  return f(n - 1);\n}\nreturn f(1e6) === \"foo\" && f(1e6+1) === \"bar\";"
             },
         ]
     }

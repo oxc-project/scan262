@@ -53,11 +53,7 @@ fn generate_meta(entry: &Entry) {
             let name = &t.name;
             let exec = &t.exec;
             quote! {
-                Subtest {
-                    name: #name,
-                    exec: #exec,
-                }
-
+                Subtest { name: #name, exec: #exec }
             }
         })
         .collect::<Vec<_>>();
@@ -92,7 +88,9 @@ fn generate_meta(entry: &Entry) {
                 #exec
             }
             fn subtests(&self) -> Vec<Subtest> {
-                vec![#(#subtests,)*]
+                vec![
+                    #(#subtests,)*
+                ]
             }
         }
     };
@@ -117,7 +115,9 @@ fn generate_features(entries: &[Entry]) {
 }
 
 fn generate_implementation_module(entries: &[Entry]) {
-    let mods = entries.iter().map(|e| format_ident!("{}", e.file_name().to_string()));
+    let mut mods =
+        entries.iter().map(|e| format_ident!("{}", e.file_name().to_string())).collect::<Vec<_>>();
+    mods.sort_unstable();
     let token_stream = quote! {
         #(mod #mods;)*
     };
@@ -125,7 +125,9 @@ fn generate_implementation_module(entries: &[Entry]) {
 }
 
 fn generate_meta_module(entries: &[Entry]) {
-    let mods = entries.iter().map(|e| format_ident!("{}", e.file_name().to_string()));
+    let mut mods =
+        entries.iter().map(|e| format_ident!("{}", e.file_name().to_string())).collect::<Vec<_>>();
+    mods.sort_unstable();
     let token_stream = quote! {
         #(mod #mods;)*
     };

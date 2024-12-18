@@ -28,9 +28,9 @@ impl Meta for Es6RegExpPrototypeCompile {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "basic functionality", exec :
-            "if (typeof RegExp.prototype.compile !== 'function')\n  return false\nvar rx = /a/;\nrx.compile('b');\nreturn rx.test('b');",
+            "if (typeof RegExp.prototype.compile !== 'function')\n  return false\nvar rx = /a/;\nrx.compile('b');\nreturn rx.test('b');"
             }, Subtest { name : "returns this", exec :
-            "var rx = /a/;\nreturn rx.compile('b') === rx;", },
+            "var rx = /a/;\nreturn rx.compile('b') === rx;" },
         ]
     }
 }

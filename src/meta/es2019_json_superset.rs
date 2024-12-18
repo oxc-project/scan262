@@ -28,9 +28,9 @@ impl Meta for Es2019JsonSuperset {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "LINE SEPARATOR can appear in string literals", exec :
-            "return eval(\"'\\u2028'\") === \"\\u2028\";", }, Subtest { name :
+            "return eval(\"'\\u2028'\") === \"\\u2028\";" }, Subtest { name :
             "PARAGRAPH SEPARATOR can appear in string literals", exec :
-            "return eval(\"'\\u2029'\") === \"\\u2029\";", },
+            "return eval(\"'\\u2029'\") === \"\\u2029\";" },
         ]
     }
 }

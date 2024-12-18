@@ -28,11 +28,11 @@ impl Meta for Es2025RegExpPatternModifiers {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "i flag", exec :
-            "const regex = /^[a-z](?-i:[a-z])$/i;\nreturn regex.test(\"ab\") && regex.test(\"Ab\") && !regex.test(\"aB\");",
+            "const regex = /^[a-z](?-i:[a-z])$/i;\nreturn regex.test(\"ab\") && regex.test(\"Ab\") && !regex.test(\"aB\");"
             }, Subtest { name : "m flag", exec :
-            "const regex = /^a|(?m:^b)/;\nreturn regex.test(\"a\") && regex.test(\"b\") && regex.test(\"c\\nb\") && !regex.test(\"c\\na\");",
+            "const regex = /^a|(?m:^b)/;\nreturn regex.test(\"a\") && regex.test(\"b\") && regex.test(\"c\\nb\") && !regex.test(\"c\\na\");"
             }, Subtest { name : "s flag", exec :
-            "const regex = /.(?-s:.)/s;\nreturn regex.test(\"\\na\") && regex.test(\"aa\") && !regex.test(\"\\n\\n\");",
+            "const regex = /.(?-s:.)/s;\nreturn regex.test(\"\\na\") && regex.test(\"aa\") && !regex.test(\"\\n\\n\");"
             },
         ]
     }

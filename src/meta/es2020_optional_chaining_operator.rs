@@ -28,15 +28,15 @@ impl Meta for Es2020OptionalChainingOperator {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "optional property access", exec :
-            "var foo = { baz: 42 };\nvar bar = null;\nreturn foo?.baz === 42 && bar?.baz === void undefined;",
+            "var foo = { baz: 42 };\nvar bar = null;\nreturn foo?.baz === 42 && bar?.baz === void undefined;"
             }, Subtest { name : "optional bracket access", exec :
-            "var foo = { baz: 42 };\nvar bar = null;\nreturn foo?.['baz'] === 42 && bar?.['baz'] === void undefined;",
+            "var foo = { baz: 42 };\nvar bar = null;\nreturn foo?.['baz'] === 42 && bar?.['baz'] === void undefined;"
             }, Subtest { name : "optional method call", exec :
-            "var foo = { baz: function () { return this.value; }, value: 42 };\nvar bar = null;\nreturn foo?.baz() === 42 && bar?.baz() === void undefined;",
+            "var foo = { baz: function () { return this.value; }, value: 42 };\nvar bar = null;\nreturn foo?.baz() === 42 && bar?.baz() === void undefined;"
             }, Subtest { name : "optional function call", exec :
-            "var foo = { baz: function () { return 42; } };\nvar bar = {};\nfunction baz() { return 42; };\nvar n;\nreturn foo.baz?.() === 42 && bar.baz?.() === void undefined && baz?.() === 42 && n?.() === void undefined;",
+            "var foo = { baz: function () { return 42; } };\nvar bar = {};\nfunction baz() { return 42; };\nvar n;\nreturn foo.baz?.() === 42 && bar.baz?.() === void undefined && baz?.() === 42 && n?.() === void undefined;"
             }, Subtest { name : "spread parameters after optional chaining", exec :
-            "var fn = null;\nvar n = null;\nvar o = {};\n\nreturn fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;",
+            "var fn = null;\nvar n = null;\nvar o = {};\n\nreturn fn?.(...[], 1) === void undefined && fn?.(...[], ...[]) === void undefined && o.method?.(...[], 1) === void undefined && n?.method(...[], 1) === void undefined;"
             },
         ]
     }

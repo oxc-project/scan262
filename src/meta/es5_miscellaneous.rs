@@ -28,22 +28,22 @@ impl Meta for Es5Miscellaneous {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "Function.prototype.apply permits array-likes", exec :
-            "function () {\ntry {\n  return (function(a,b) { return a === 1 && b === 2; }).apply({}, {0:1, 1:2, length:2});\n} catch (e) {\n  return false;\n}\n    }",
+            "function () {\ntry {\n  return (function(a,b) { return a === 1 && b === 2; }).apply({}, {0:1, 1:2, length:2});\n} catch (e) {\n  return false;\n}\n    }"
             }, Subtest { name : "parseInt ignores leading zeros", exec :
-            "function () {\nreturn parseInt('010') === 10;\n    }", }, Subtest { name :
+            "function () {\nreturn parseInt('010') === 10;\n    }" }, Subtest { name :
             "Function \"prototype\" property is non-enumerable", exec :
-            "return !Function().propertyIsEnumerable('prototype');", }, Subtest { name :
+            "return !Function().propertyIsEnumerable('prototype');" }, Subtest { name :
             "Arguments toStringTag is \"Arguments\"", exec :
-            "return (function(){ return Object.prototype.toString.call(arguments) === '[object Arguments]'; }());",
+            "return (function(){ return Object.prototype.toString.call(arguments) === '[object Arguments]'; }());"
             }, Subtest { name : "Zero-width chars in identifiers", exec :
-            "var _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;", }, Subtest { name :
+            "var _\\u200c\\u200d = true;\nreturn _\\u200c\\u200d;" }, Subtest { name :
             "Unreserved words", exec :
-            "var abstract, boolean, byte, char, double, final, float, goto, int, long,\n  native, short, synchronized, transient, volatile;\nreturn true;",
+            "var abstract, boolean, byte, char, double, final, float, goto, int, long,\n  native, short, synchronized, transient, volatile;\nreturn true;"
             }, Subtest { name :
             "Enumerable properties can be shadowed by non-enumerables", exec :
-            "var result = true;\nObject.prototype.length = 42;\nfor (var i in Function) {\n    if (i === 'length') {\n        result = false;\n    }\n}\ndelete Object.prototype.length;\nreturn result;",
+            "var result = true;\nObject.prototype.length = 42;\nfor (var i in Function) {\n    if (i === 'length') {\n        result = false;\n    }\n}\ndelete Object.prototype.length;\nreturn result;"
             }, Subtest { name : "Thrown functions have proper \"this\" values", exec :
-            "try {\n  throw function() { return !('a' in this); };\n}\ncatch(e) {\n  var a = true;\n  return e();\n}",
+            "try {\n  throw function() { return !('a' in this); };\n}\ncatch(e) {\n  var a = true;\n  return e();\n}"
             },
         ]
     }

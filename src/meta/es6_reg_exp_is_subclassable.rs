@@ -28,13 +28,13 @@ impl Meta for Es6RegExpIsSubclassable {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "basic functionality", exec :
-            "class R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r.global && r.source === \"baz\";",
+            "class R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r.global && r.source === \"baz\";"
             }, Subtest { name : "correct prototype chain", exec :
-            "class R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp;",
+            "class R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp;"
             }, Subtest { name : "RegExp.prototype.exec", exec :
-            "class R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r.exec(\"foobarbaz\")[0] === \"baz\" && r.lastIndex === 9;",
+            "class R extends RegExp {}\nvar r = new R(\"baz\",\"g\");\nreturn r.exec(\"foobarbaz\")[0] === \"baz\" && r.lastIndex === 9;"
             }, Subtest { name : "RegExp.prototype.test", exec :
-            "class R extends RegExp {}\nvar r = new R(\"baz\");\nreturn r.test(\"foobarbaz\");",
+            "class R extends RegExp {}\nvar r = new R(\"baz\");\nreturn r.test(\"foobarbaz\");"
             },
         ]
     }

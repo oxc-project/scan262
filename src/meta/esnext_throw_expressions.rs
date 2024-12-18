@@ -28,13 +28,13 @@ impl Meta for EsnextThrowExpressions {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "logical", exec :
-            "var a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}",
+            "var a, b;\ntry {\n  a = 19 || throw 77;\n  b = 88 && throw 23;\n} catch (e) {\n  return a + e === 42;\n}"
             }, Subtest { name : "parameter initializers", exec :
-            "function fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}",
+            "function fn (arg = throw 42) {\n  return arg;\n}\n\nif (fn(21) !== 21) return false;\n\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}"
             }, Subtest { name : "arrow function bodies", exec :
-            "var fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}",
+            "var fn = () => throw 42;\ntry {\n  fn();\n} catch (e) {\n  return e === 42;\n}"
             }, Subtest { name : "conditionals", exec :
-            "true ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}",
+            "true ? 42 : throw 21;\ntry {\n  false ? 42 : throw 21;\n} catch (e) {\n  return e === 21;\n}"
             },
         ]
     }

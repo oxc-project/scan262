@@ -28,15 +28,15 @@ impl Meta for Es6ProtoInObjectLiterals {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "basic support", exec :
-            "return { __proto__ : [] } instanceof Array\n  && !({ __proto__ : null } instanceof Object);",
+            "return { __proto__ : [] } instanceof Array\n  && !({ __proto__ : null } instanceof Object);"
             }, Subtest { name : "multiple __proto__ is an error", exec :
-            "try {\n  eval(\"({ __proto__ : [], __proto__: {} })\");\n}\ncatch(e) {\n  return true;\n}",
+            "try {\n  eval(\"({ __proto__ : [], __proto__: {} })\");\n}\ncatch(e) {\n  return true;\n}"
             }, Subtest { name : "not a computed property", exec :
-            "if (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar a = \"__proto__\";\nreturn !({ [a] : [] } instanceof Array);",
+            "if (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar a = \"__proto__\";\nreturn !({ [a] : [] } instanceof Array);"
             }, Subtest { name : "not a shorthand property", exec :
-            "if (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar __proto__ = [];\nreturn !({ __proto__ } instanceof Array);",
+            "if (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nvar __proto__ = [];\nreturn !({ __proto__ } instanceof Array);"
             }, Subtest { name : "not a shorthand method", exec :
-            "if (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nreturn !({ __proto__(){} } instanceof Function);",
+            "if (!({ __proto__ : [] } instanceof Array)) {\n  return false;\n}\nreturn !({ __proto__(){} } instanceof Function);"
             },
         ]
     }

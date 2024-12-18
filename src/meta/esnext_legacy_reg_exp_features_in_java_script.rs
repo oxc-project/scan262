@@ -28,9 +28,9 @@ impl Meta for EsnextLegacyRegExpFeaturesInJavaScript {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "RegExp \"lastMatch\"", exec :
-            "function () {\nvar re = /\\w/;\nre.exec('x');\nreturn RegExp.lastMatch === 'x';\n      }",
+            "function () {\nvar re = /\\w/;\nre.exec('x');\nreturn RegExp.lastMatch === 'x';\n      }"
             }, Subtest { name : "RegExp.$1-$9", exec :
-            "function () {\nfor (var i = 1; i < 10; i++) {\n  if (!(('$' + i) in RegExp)) return false;\n}\nreturn true;\n      }",
+            "function () {\nfor (var i = 1; i < 10; i++) {\n  if (!(('$' + i) in RegExp)) return false;\n}\nreturn true;\n      }"
             },
         ]
     }

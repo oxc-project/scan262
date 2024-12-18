@@ -28,22 +28,22 @@ impl Meta for Es6ObjectStaticMethodsAcceptPrimitives {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "Object.getPrototypeOf", exec :
-            "return Object.getPrototypeOf('a').constructor === String;", }, Subtest {
-            name : "Object.getOwnPropertyDescriptor", exec :
-            "return Object.getOwnPropertyDescriptor('a', 'foo') === void undefined;", },
+            "return Object.getPrototypeOf('a').constructor === String;" }, Subtest { name
+            : "Object.getOwnPropertyDescriptor", exec :
+            "return Object.getOwnPropertyDescriptor('a', 'foo') === void undefined;" },
             Subtest { name : "Object.getOwnPropertyNames", exec :
-            "var s = Object.getOwnPropertyNames('a');\nreturn s.length === 2 &&\n  ((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));",
-            }, Subtest { name : "Object.seal", exec : "return Object.seal('a') === 'a';",
+            "var s = Object.getOwnPropertyNames('a');\nreturn s.length === 2 &&\n  ((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));"
+            }, Subtest { name : "Object.seal", exec : "return Object.seal('a') === 'a';"
             }, Subtest { name : "Object.freeze", exec :
-            "return Object.freeze('a') === 'a';", }, Subtest { name :
+            "return Object.freeze('a') === 'a';" }, Subtest { name :
             "Object.preventExtensions", exec :
-            "return Object.preventExtensions('a') === 'a';", }, Subtest { name :
-            "Object.isSealed", exec : "return Object.isSealed('a') === true;", }, Subtest
-            { name : "Object.isFrozen", exec : "return Object.isFrozen('a') === true;",
-            }, Subtest { name : "Object.isExtensible", exec :
-            "return Object.isExtensible('a') === false;", }, Subtest { name :
+            "return Object.preventExtensions('a') === 'a';" }, Subtest { name :
+            "Object.isSealed", exec : "return Object.isSealed('a') === true;" }, Subtest
+            { name : "Object.isFrozen", exec : "return Object.isFrozen('a') === true;" },
+            Subtest { name : "Object.isExtensible", exec :
+            "return Object.isExtensible('a') === false;" }, Subtest { name :
             "Object.keys", exec :
-            "var s = Object.keys('a');\nreturn s.length === 1 && s[0] === '0';", },
+            "var s = Object.keys('a');\nreturn s.length === 1 && s[0] === '0';" },
         ]
     }
 }

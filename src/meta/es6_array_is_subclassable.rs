@@ -28,27 +28,27 @@ impl Meta for Es6ArrayIsSubclassable {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "length property (accessing)", exec :
-            "class C extends Array {}\nvar c = new C();\nvar len1 = c.length;\nc[2] = 'foo';\nvar len2 = c.length;\nreturn len1 === 0 && len2 === 3;",
+            "class C extends Array {}\nvar c = new C();\nvar len1 = c.length;\nc[2] = 'foo';\nvar len2 = c.length;\nreturn len1 === 0 && len2 === 3;"
             }, Subtest { name : "length property (setting)", exec :
-            "class C extends Array {}\nvar c = new C();\nc[2] = 'foo';\nc.length = 1;\nreturn c.length === 1 && !(2 in c);",
+            "class C extends Array {}\nvar c = new C();\nc[2] = 'foo';\nc.length = 1;\nreturn c.length === 1 && !(2 in c);"
             }, Subtest { name : "correct prototype chain", exec :
-            "class C extends Array {}\nvar c = new C();\nreturn c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;",
+            "class C extends Array {}\nvar c = new C();\nreturn c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;"
             }, Subtest { name : "Array.isArray support", exec :
-            "class C extends Array {}\nreturn Array.isArray(new C());", }, Subtest { name
+            "class C extends Array {}\nreturn Array.isArray(new C());" }, Subtest { name
             : "Array.prototype.concat", exec :
-            "class C extends Array {}\nvar c = new C();\nreturn c.concat(1) instanceof C;",
+            "class C extends Array {}\nvar c = new C();\nreturn c.concat(1) instanceof C;"
             }, Subtest { name : "Array.prototype.filter", exec :
-            "class C extends Array {}\nvar c = new C();\nreturn c.filter(Boolean) instanceof C;",
+            "class C extends Array {}\nvar c = new C();\nreturn c.filter(Boolean) instanceof C;"
             }, Subtest { name : "Array.prototype.map", exec :
-            "class C extends Array {}\nvar c = new C();\nreturn c.map(Boolean) instanceof C;",
+            "class C extends Array {}\nvar c = new C();\nreturn c.map(Boolean) instanceof C;"
             }, Subtest { name : "Array.prototype.slice", exec :
-            "class C extends Array {}\nvar c = new C();\nc.push(2,4,6);\nreturn c.slice(1,2) instanceof C;",
+            "class C extends Array {}\nvar c = new C();\nc.push(2,4,6);\nreturn c.slice(1,2) instanceof C;"
             }, Subtest { name : "Array.prototype.splice", exec :
-            "class C extends Array {}\nvar c = new C();\nc.push(2,4,6);\nreturn c.splice(1,2) instanceof C;",
+            "class C extends Array {}\nvar c = new C();\nc.push(2,4,6);\nreturn c.splice(1,2) instanceof C;"
             }, Subtest { name : "Array.from", exec :
-            "class C extends Array {}\nreturn C.from({ length: 0 }) instanceof C;", },
+            "class C extends Array {}\nreturn C.from({ length: 0 }) instanceof C;" },
             Subtest { name : "Array.of", exec :
-            "class C extends Array {}\nreturn C.of(0) instanceof C;", },
+            "class C extends Array {}\nreturn C.of(0) instanceof C;" },
         ]
     }
 }

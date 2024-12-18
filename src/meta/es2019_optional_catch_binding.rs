@@ -28,11 +28,11 @@ impl Meta for Es2019OptionalCatchBinding {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "basic", exec :
-            "try {\n  throw new Error();\n}\ncatch {\n  return true;\n}\nreturn false;",
+            "try {\n  throw new Error();\n}\ncatch {\n  return true;\n}\nreturn false;"
             }, Subtest { name : "await", exec :
-            "(async function () {\n  try {\n    await Promise.reject();\n  }\n  catch {\n    asyncTestPassed();\n  }\n})();",
+            "(async function () {\n  try {\n    await Promise.reject();\n  }\n  catch {\n    asyncTestPassed();\n  }\n})();"
             }, Subtest { name : "yield", exec :
-            "function *foo() {\n  try {\n    yield;\n  }\n  catch {\n    return true;\n  }\n}\n\nvar it = foo();\nit.next();\nreturn it.throw().value;",
+            "function *foo() {\n  try {\n    yield;\n  }\n  catch {\n    return true;\n  }\n}\n\nvar it = foo();\nit.next();\nreturn it.throw().value;"
             },
         ]
     }

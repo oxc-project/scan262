@@ -27,19 +27,19 @@ impl Meta for Es2020BigInt {
     }
     fn subtests(&self) -> Vec<Subtest> {
         vec![
-            Subtest { name : "basic functionality", exec : "return (1n + 2n) === 3n;", },
-            Subtest { name : "constructor", exec : "return BigInt(\"3\") === 3n;", },
+            Subtest { name : "basic functionality", exec : "return (1n + 2n) === 3n;" },
+            Subtest { name : "constructor", exec : "return BigInt(\"3\") === 3n;" },
             Subtest { name : "BigInt.asUintN", exec :
-            "return typeof BigInt.asUintN === 'function';", }, Subtest { name :
-            "BigInt.asIntN", exec : "return typeof BigInt.asIntN === 'function';", },
+            "return typeof BigInt.asUintN === 'function';" }, Subtest { name :
+            "BigInt.asIntN", exec : "return typeof BigInt.asIntN === 'function';" },
             Subtest { name : "BigInt64Array", exec :
-            "var buffer = new ArrayBuffer(64);\nvar view = new BigInt64Array(buffer);\nview[0] = 0x8000000000000000n;\nreturn view[0] === -0x8000000000000000n;",
+            "var buffer = new ArrayBuffer(64);\nvar view = new BigInt64Array(buffer);\nview[0] = 0x8000000000000000n;\nreturn view[0] === -0x8000000000000000n;"
             }, Subtest { name : "BigUint64Array", exec :
-            "var buffer = new ArrayBuffer(64);\nvar view = new BigUint64Array(buffer);\nview[0] = 0x10000000000000000n;\nreturn view[0] === 0n;",
+            "var buffer = new ArrayBuffer(64);\nvar view = new BigUint64Array(buffer);\nview[0] = 0x10000000000000000n;\nreturn view[0] === 0n;"
             }, Subtest { name : "DataView.prototype.getBigInt64", exec :
-            "var buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setBigInt64(0, 1n);\nreturn view.getBigInt64(0) === 1n;",
+            "var buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setBigInt64(0, 1n);\nreturn view.getBigInt64(0) === 1n;"
             }, Subtest { name : "DataView.prototype.getBigUint64", exec :
-            "var buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setBigUint64(0, 1n);\nreturn view.getBigUint64(0) === 1n;",
+            "var buffer = new ArrayBuffer(64);\nvar view = new DataView(buffer);\nview.setBigUint64(0, 1n);\nreturn view.getBigUint64(0) === 1n;"
             },
         ]
     }

@@ -28,7 +28,7 @@ impl Meta for EsnextClassAndPropertyDecorators {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "class decorators", exec :
-            "class A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;",
+            "class A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;"
             },
         ]
     }

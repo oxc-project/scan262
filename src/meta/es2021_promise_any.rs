@@ -28,9 +28,9 @@ impl Meta for Es2021PromiseAny {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "fulfillment", exec :
-            "Promise.any([\n  Promise.reject(1),\n  Promise.resolve(2),\n  Promise.resolve(3)\n]).then(it => {\n  if (it === 2) asyncTestPassed();\n});",
+            "Promise.any([\n  Promise.reject(1),\n  Promise.resolve(2),\n  Promise.resolve(3)\n]).then(it => {\n  if (it === 2) asyncTestPassed();\n});"
             }, Subtest { name : "AggregateError", exec :
-            "Promise.any([\n  Promise.reject(1),\n  Promise.reject(2),\n  Promise.reject(3)\n]).catch (error => {\n  if (error instanceof AggregateError && error.errors.length === 3) asyncTestPassed();\n});",
+            "Promise.any([\n  Promise.reject(1),\n  Promise.reject(2),\n  Promise.reject(3)\n]).catch (error => {\n  if (error instanceof AggregateError && error.errors.length === 3) asyncTestPassed();\n});"
             },
         ]
     }

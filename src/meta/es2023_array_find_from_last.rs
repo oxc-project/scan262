@@ -28,9 +28,9 @@ impl Meta for Es2023ArrayFindFromLast {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "Array.prototype.findLast", exec :
-            "var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];\nreturn arr.findLast(function (o) { return o.x === 1; }) === arr[2];",
+            "var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];\nreturn arr.findLast(function (o) { return o.x === 1; }) === arr[2];"
             }, Subtest { name : "Array.prototype.findLastIndex", exec :
-            "var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];\nreturn arr.findLastIndex(function (o) { return o.x === 1; }) === 2;",
+            "var arr = [{ x: 1 }, { x: 2 }, { x: 1 }, { x: 2 }];\nreturn arr.findLastIndex(function (o) { return o.x === 1; }) === 2;"
             },
         ]
     }

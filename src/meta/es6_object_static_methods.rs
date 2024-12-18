@@ -28,13 +28,13 @@ impl Meta for Es6ObjectStaticMethods {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "Object.assign", exec :
-            "var o = Object.assign({a:true}, {b:true}, {c:true});\nreturn \"a\" in o && \"b\" in o && \"c\" in o;",
+            "var o = Object.assign({a:true}, {b:true}, {c:true});\nreturn \"a\" in o && \"b\" in o && \"c\" in o;"
             }, Subtest { name : "Object.is", exec :
-            "return typeof Object.is === 'function' &&\n  Object.is(NaN, NaN) &&\n !Object.is(-0, 0);",
+            "return typeof Object.is === 'function' &&\n  Object.is(NaN, NaN) &&\n !Object.is(-0, 0);"
             }, Subtest { name : "Object.getOwnPropertySymbols", exec :
-            "var o = {};\nvar sym = Symbol(), sym2 = Symbol(), sym3 = Symbol();\no[sym]  = true;\no[sym2] = true;\no[sym3] = true;\nvar result = Object.getOwnPropertySymbols(o);\nreturn result[0] === sym\n  && result[1] === sym2\n  && result[2] === sym3;",
+            "var o = {};\nvar sym = Symbol(), sym2 = Symbol(), sym3 = Symbol();\no[sym]  = true;\no[sym2] = true;\no[sym3] = true;\nvar result = Object.getOwnPropertySymbols(o);\nreturn result[0] === sym\n  && result[1] === sym2\n  && result[2] === sym3;"
             }, Subtest { name : "Object.setPrototypeOf", exec :
-            "return Object.setPrototypeOf({}, Array.prototype) instanceof Array;", },
+            "return Object.setPrototypeOf({}, Array.prototype) instanceof Array;" },
         ]
     }
 }

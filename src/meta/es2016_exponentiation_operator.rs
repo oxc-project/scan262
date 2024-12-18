@@ -28,10 +28,10 @@ impl Meta for Es2016ExponentiationOperator {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "basic support", exec :
-            "return 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;", }, Subtest {
-            name : "assignment", exec : "var a = 2; a **= 3; return a === 8;", }, Subtest
+            "return 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;" }, Subtest {
+            name : "assignment", exec : "var a = 2; a **= 3; return a === 8;" }, Subtest
             { name : "early syntax error for unary negation without parens", exec :
-            "if (2 ** 3 !== 8) { return false; }\ntry {\n  function (\"-5 ** 2\")();\n} catch (e) {\n  return true;\n}",
+            "if (2 ** 3 !== 8) { return false; }\ntry {\n  function (\"-5 ** 2\")();\n} catch (e) {\n  return true;\n}"
             },
         ]
     }

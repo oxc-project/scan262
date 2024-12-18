@@ -28,10 +28,10 @@ impl Meta for Es2019SymbolPrototypeDescription {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "basic", exec :
-            "return Symbol('foo').description === 'foo';", }, Subtest { name :
-            "empty description", exec : "return Symbol('').description === '';", },
+            "return Symbol('foo').description === 'foo';" }, Subtest { name :
+            "empty description", exec : "return Symbol('').description === '';" },
             Subtest { name : "undefined description", exec :
-            "return Symbol.prototype.hasOwnProperty('description')\n  && Symbol().description === void undefined;",
+            "return Symbol.prototype.hasOwnProperty('description')\n  && Symbol().description === void undefined;"
             },
         ]
     }

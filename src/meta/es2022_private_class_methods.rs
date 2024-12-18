@@ -28,13 +28,13 @@ impl Meta for Es2022PrivateClassMethods {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "private instance methods", exec :
-            "class C {\n  #x() { return 42; }\n  x() {\n    return this.#x();\n  }\n}\nreturn new C().x() === 42;",
+            "class C {\n  #x() { return 42; }\n  x() {\n    return this.#x();\n  }\n}\nreturn new C().x() === 42;"
             }, Subtest { name : "private static methods", exec :
-            "class C {\n  static #x() { return 42; }\n  x() {\n    return C.#x();\n  }\n}\nreturn new C().x() === 42;",
+            "class C {\n  static #x() { return 42; }\n  x() {\n    return C.#x();\n  }\n}\nreturn new C().x() === 42;"
             }, Subtest { name : "private accessor properties", exec :
-            "var y = false;\nclass C {\n  get #x() { return 42; }\n  set #x(x) { y = x; }\n  x() {\n    this.#x = true;\n    return this.#x;\n  }\n}\nreturn new C().x() === 42 && y;",
+            "var y = false;\nclass C {\n  get #x() { return 42; }\n  set #x(x) { y = x; }\n  x() {\n    this.#x = true;\n    return this.#x;\n  }\n}\nreturn new C().x() === 42 && y;"
             }, Subtest { name : "private static accessor properties", exec :
-            "var y = false;\nclass C {\n  static get #x() { return 42; }\n  static set #x(x) { y = x; }\n  x() {\n    C.#x = true;\n    return C.#x;\n  }\n}\nreturn new C().x() === 42 && y;",
+            "var y = false;\nclass C {\n  static get #x() { return 42; }\n  static set #x(x) { y = x; }\n  x() {\n    C.#x = true;\n    return C.#x;\n  }\n}\nreturn new C().x() === 42 && y;"
             },
         ]
     }

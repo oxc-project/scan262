@@ -28,17 +28,17 @@ impl Meta for Es6RegExpPrototypeProperties {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "RegExp.prototype.flags", exec :
-            "return /./igm.flags === \"gim\" && /./.flags === \"\";", }, Subtest { name :
+            "return /./igm.flags === \"gim\" && /./.flags === \"\";" }, Subtest { name :
             "RegExp.prototype[Symbol.match]", exec :
-            "return typeof RegExp.prototype[Symbol.match] === 'function';", }, Subtest {
+            "return typeof RegExp.prototype[Symbol.match] === 'function';" }, Subtest {
             name : "RegExp.prototype[Symbol.replace]", exec :
-            "return typeof RegExp.prototype[Symbol.replace] === 'function';", }, Subtest
-            { name : "RegExp.prototype[Symbol.split]", exec :
-            "return typeof RegExp.prototype[Symbol.split] === 'function';", }, Subtest {
+            "return typeof RegExp.prototype[Symbol.replace] === 'function';" }, Subtest {
+            name : "RegExp.prototype[Symbol.split]", exec :
+            "return typeof RegExp.prototype[Symbol.split] === 'function';" }, Subtest {
             name : "RegExp.prototype[Symbol.search]", exec :
-            "return typeof RegExp.prototype[Symbol.search] === 'function';", }, Subtest {
+            "return typeof RegExp.prototype[Symbol.search] === 'function';" }, Subtest {
             name : "RegExp[Symbol.species]", exec :
-            "var prop = Object.getOwnPropertyDescriptor(RegExp, Symbol.species);\nreturn 'get' in prop && RegExp[Symbol.species] === RegExp;",
+            "var prop = Object.getOwnPropertyDescriptor(RegExp, Symbol.species);\nreturn 'get' in prop && RegExp[Symbol.species] === RegExp;"
             },
         ]
     }

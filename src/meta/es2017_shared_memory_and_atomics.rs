@@ -28,33 +28,33 @@ impl Meta for Es2017SharedMemoryAndAtomics {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "SharedArrayBuffer", exec :
-            "return typeof SharedArrayBuffer === 'function';", }, Subtest { name :
+            "return typeof SharedArrayBuffer === 'function';" }, Subtest { name :
             "SharedArrayBuffer[Symbol.species]", exec :
-            "return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;", }, Subtest
+            "return SharedArrayBuffer[Symbol.species] === SharedArrayBuffer;" }, Subtest
             { name : "SharedArrayBuffer.prototype.byteLength", exec :
-            "return 'byteLength' in SharedArrayBuffer.prototype;", }, Subtest { name :
+            "return 'byteLength' in SharedArrayBuffer.prototype;" }, Subtest { name :
             "SharedArrayBuffer.prototype.slice", exec :
-            "return typeof SharedArrayBuffer.prototype.slice === 'function';", }, Subtest
+            "return typeof SharedArrayBuffer.prototype.slice === 'function';" }, Subtest
             { name : "SharedArrayBuffer.prototype[Symbol.toStringTag]", exec :
-            "return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';",
+            "return SharedArrayBuffer.prototype[Symbol.toStringTag] === 'SharedArrayBuffer';"
             }, Subtest { name : "Atomics.add", exec :
-            "return typeof Atomics.add === 'function';", }, Subtest { name :
-            "Atomics.and", exec : "return typeof Atomics.and === 'function';", }, Subtest
+            "return typeof Atomics.add === 'function';" }, Subtest { name :
+            "Atomics.and", exec : "return typeof Atomics.and === 'function';" }, Subtest
             { name : "Atomics.compareExchange", exec :
-            "return typeof Atomics.compareExchange === 'function';", }, Subtest { name :
-            "Atomics.exchange", exec : "return typeof Atomics.exchange === 'function';",
+            "return typeof Atomics.compareExchange === 'function';" }, Subtest { name :
+            "Atomics.exchange", exec : "return typeof Atomics.exchange === 'function';"
             }, Subtest { name : "Atomics.wait", exec :
-            "return typeof Atomics.wait === 'function';", }, Subtest { name :
-            "Atomics.notify", exec : "return typeof Atomics.notify === 'function';", },
+            "return typeof Atomics.wait === 'function';" }, Subtest { name :
+            "Atomics.notify", exec : "return typeof Atomics.notify === 'function';" },
             Subtest { name : "Atomics.isLockFree", exec :
-            "return typeof Atomics.isLockFree === 'function';", }, Subtest { name :
-            "Atomics.load", exec : "return typeof Atomics.load === 'function';", },
+            "return typeof Atomics.isLockFree === 'function';" }, Subtest { name :
+            "Atomics.load", exec : "return typeof Atomics.load === 'function';" },
             Subtest { name : "Atomics.or", exec :
-            "return typeof Atomics.or === 'function';", }, Subtest { name :
-            "Atomics.store", exec : "return typeof Atomics.store === 'function';", },
+            "return typeof Atomics.or === 'function';" }, Subtest { name :
+            "Atomics.store", exec : "return typeof Atomics.store === 'function';" },
             Subtest { name : "Atomics.sub", exec :
-            "return typeof Atomics.sub === 'function';", }, Subtest { name :
-            "Atomics.xor", exec : "return typeof Atomics.xor === 'function';", },
+            "return typeof Atomics.sub === 'function';" }, Subtest { name :
+            "Atomics.xor", exec : "return typeof Atomics.xor === 'function';" },
         ]
     }
 }

@@ -28,17 +28,17 @@ impl Meta for Es6FunctionIsSubclassable {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "can be called", exec :
-            "class C extends Function {}\nvar c = new C(\"return 'foo';\");\nreturn c() === 'foo';",
+            "class C extends Function {}\nvar c = new C(\"return 'foo';\");\nreturn c() === 'foo';"
             }, Subtest { name : "correct prototype chain", exec :
-            "class C extends Function {}\nvar c = new C(\"return 'foo';\");\nreturn c instanceof C && c instanceof Function && Object.getPrototypeOf(C) === Function;",
+            "class C extends Function {}\nvar c = new C(\"return 'foo';\");\nreturn c instanceof C && c instanceof Function && Object.getPrototypeOf(C) === Function;"
             }, Subtest { name : "can be used with \"new\"", exec :
-            "class C extends Function {}\nvar c = new C(\"this.bar = 2;\");\nc.prototype.baz = 3;\nreturn new c().bar === 2 && new c().baz === 3;",
+            "class C extends Function {}\nvar c = new C(\"this.bar = 2;\");\nc.prototype.baz = 3;\nreturn new c().bar === 2 && new c().baz === 3;"
             }, Subtest { name : "Function.prototype.call", exec :
-            "class C extends Function {}\nvar c = new C(\"x\", \"return this.bar + x;\");\nreturn c.call({bar:1}, 2) === 3;",
+            "class C extends Function {}\nvar c = new C(\"x\", \"return this.bar + x;\");\nreturn c.call({bar:1}, 2) === 3;"
             }, Subtest { name : "Function.prototype.apply", exec :
-            "class C extends Function {}\nvar c = new C(\"x\", \"return this.bar + x;\");\nreturn c.apply({bar:1}, [2]) === 3;",
+            "class C extends Function {}\nvar c = new C(\"x\", \"return this.bar + x;\");\nreturn c.apply({bar:1}, [2]) === 3;"
             }, Subtest { name : "Function.prototype.bind", exec :
-            "class C extends Function {}\nvar c = new C(\"x\", \"y\", \"return this.bar + x + y;\").bind({bar:1}, 2);\nreturn c(6) === 9 && c instanceof C;",
+            "class C extends Function {}\nvar c = new C(\"x\", \"y\", \"return this.bar + x + y;\").bind({bar:1}, 2);\nreturn c(6) === 9 && c instanceof C;"
             },
         ]
     }

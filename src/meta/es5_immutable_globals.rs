@@ -28,11 +28,11 @@ impl Meta for Es5ImmutableGlobals {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "undefined", exec :
-            "undefined = 12345;\nvar result = typeof undefined === 'undefined';\nundefined = void 0;\nreturn result;",
+            "undefined = 12345;\nvar result = typeof undefined === 'undefined';\nundefined = void 0;\nreturn result;"
             }, Subtest { name : "NaN", exec :
-            "NaN = false;\nvar result = typeof NaN === 'number';\nNaN = Math.sqrt(-1);\nreturn result;",
+            "NaN = false;\nvar result = typeof NaN === 'number';\nNaN = Math.sqrt(-1);\nreturn result;"
             }, Subtest { name : "Infinity", exec :
-            "Infinity = false;\nvar result = typeof Infinity === 'number';\nInfinity = 1/0;\nreturn result;",
+            "Infinity = false;\nvar result = typeof Infinity === 'number';\nInfinity = 1/0;\nreturn result;"
             },
         ]
     }

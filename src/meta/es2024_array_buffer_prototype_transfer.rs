@@ -28,11 +28,11 @@ impl Meta for Es2024ArrayBufferPrototypeTransfer {
     fn subtests(&self) -> Vec<Subtest> {
         vec![
             Subtest { name : "ArrayBuffer.prototype.transfer()", exec :
-            "const buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;",
+            "const buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;"
             }, Subtest { name : "ArrayBuffer.prototype.transferToFixedLength()", exec :
-            "const buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transferToFixedLength();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;",
+            "const buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transferToFixedLength();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;"
             }, Subtest { name : "ArrayBuffer.prototype.detached", exec :
-            "const buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.detached && !buffer2.detached;",
+            "const buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.detached && !buffer2.detached;"
             },
         ]
     }
