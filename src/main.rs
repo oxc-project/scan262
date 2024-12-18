@@ -7,11 +7,9 @@ use std::{
 };
 
 use oxc::diagnostics::DiagnosticService;
-use rayon::iter::IntoParallelRefIterator;
-use rayon::prelude::*;
-use walkdir::WalkDir;
-
+use rayon::{iter::IntoParallelRefIterator, prelude::*};
 use scan262::{command, Scanner, FEATURES};
+use walkdir::WalkDir;
 
 pub const VALID_EXTENSIONS: [&str; 3] = ["js", "mjs", "cjs"];
 

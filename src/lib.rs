@@ -8,9 +8,10 @@ mod implementation;
 mod meta;
 mod scanner;
 
+pub use scanner::Scanner;
+
 pub use crate::{
     cli::{command, Command},
     feature::Feature,
     features::FEATURES,
 };
-pub use scanner::Scanner;

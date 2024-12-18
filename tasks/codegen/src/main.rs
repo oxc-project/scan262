@@ -1,9 +1,8 @@
 use std::fs;
 
+use codegen::Entry;
 use project_root::get_project_root;
 use quote::{format_ident, quote};
-
-use codegen::Entry;
 
 fn main() {
     let data = fs::read_to_string("./data.json").unwrap();

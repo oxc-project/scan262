@@ -1,7 +1,9 @@
-use crate::features::Es2018ObjectRestSpreadProperties;
-use crate::{ctx::Ctx, feature::Feature};
-use oxc::ast::AstKind;
-use oxc::semantic::{AstNode, Semantic};
+use oxc::{
+    ast::AstKind,
+    semantic::{AstNode, Semantic},
+};
+
+use crate::{ctx::Ctx, feature::Feature, features::Es2018ObjectRestSpreadProperties};
 impl Feature for Es2018ObjectRestSpreadProperties {
     fn test(&self, node: &AstNode<'_>, semantic: &Semantic<'_>, ctx: &mut Ctx) {
         let span = match node.kind() {
