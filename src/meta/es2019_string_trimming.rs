@@ -27,22 +27,14 @@ impl Meta for Es2019StringTrimming {
     }
     fn subtests(&self) -> Vec<Subtest> {
         vec![
-            Subtest {
-                name: "String.prototype.trimLeft",
-                exec: "return ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';",
-            },
-            Subtest {
-                name: "String.prototype.trimRight",
-                exec: "return ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';",
-            },
-            Subtest {
-                name: "String.prototype.trimStart",
-                exec: "return ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';",
-            },
-            Subtest {
-                name: "String.prototype.trimEnd",
-                exec: "return ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';",
-            },
+            Subtest { name : "String.prototype.trimLeft", exec :
+            "return ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';", }, Subtest {
+            name : "String.prototype.trimRight", exec :
+            "return ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';", }, Subtest
+            { name : "String.prototype.trimStart", exec :
+            "return ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';", }, Subtest
+            { name : "String.prototype.trimEnd", exec :
+            "return ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';", },
         ]
     }
 }

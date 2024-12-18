@@ -36,13 +36,14 @@ impl Scanner {
             .parse();
 
         let semantic_ret = SemanticBuilder::new().build(&ret.program);
-        let mut ctx = Ctx::default();
+        let semantic = semantic_ret.semantic;
         let mut stats = vec![0; features.len()];
+        let mut ctx = Ctx::default();
 
-        for node in semantic_ret.semantic.nodes() {
+        for node in semantic.nodes() {
             for (i, feature) in features.iter().enumerate() {
                 let count = ctx.diagnostics.len();
-                feature.test(node, &mut ctx);
+                feature.test(node, &semantic, &mut ctx);
                 stats[i] += ctx.diagnostics.len() - count;
             }
         }

@@ -27,23 +27,15 @@ impl Meta for Es5ObjectArrayLiteralExtensions {
     }
     fn subtests(&self) -> Vec<Subtest> {
         vec![
-            Subtest { name: "Getter accessors", exec: "return ({ get x(){ return 1 } }).x === 1;" },
-            Subtest {
-                name: "Setter accessors",
-                exec: "var value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;",
-            },
-            Subtest {
-                name: "Trailing commas in object literals",
-                exec: "return { a: true, }.a === true;",
-            },
-            Subtest {
-                name: "Trailing commas in array literals",
-                exec: "return [1,].length === 1;",
-            },
-            Subtest {
-                name: "Reserved words as property names",
-                exec: "return ({ if: 1 }).if === 1;",
-            },
+            Subtest { name : "Getter accessors", exec :
+            "return ({ get x(){ return 1 } }).x === 1;", }, Subtest { name :
+            "Setter accessors", exec :
+            "var value = 0;\n({ set x(v){ value = v; } }).x = 1;\nreturn value === 1;",
+            }, Subtest { name : "Trailing commas in object literals", exec :
+            "return { a: true, }.a === true;", }, Subtest { name :
+            "Trailing commas in array literals", exec : "return [1,].length === 1;", },
+            Subtest { name : "Reserved words as property names", exec :
+            "return ({ if: 1 }).if === 1;", },
         ]
     }
 }

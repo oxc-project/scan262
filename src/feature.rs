@@ -1,4 +1,4 @@
-use oxc::semantic::AstNode;
+use oxc::semantic::{AstNode, Semantic};
 
 use crate::ctx::Ctx;
 
@@ -21,5 +21,5 @@ pub trait Meta {
 }
 
 pub trait Feature: Meta {
-    fn test(&self, _node: &AstNode<'_>, ctx: &mut Ctx);
+    fn test(&self, _node: &AstNode<'_>, semantic: &Semantic<'_>, ctx: &mut Ctx);
 }

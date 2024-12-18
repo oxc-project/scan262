@@ -21,13 +21,13 @@ fn main() {
 fn generate_implementation(entry: &Entry) {
     let struct_name = entry.struct_name();
     let token_stream = quote! {
-        use oxc::semantic::AstNode;
+        use oxc::semantic::{AstNode, Semantic};
 
         use crate::{feature::Feature, ctx::Ctx};
         use crate::features::#struct_name;
 
         impl Feature for #struct_name {
-            fn test(&self, _node: &AstNode<'_>, _ctx: &mut Ctx) {
+            fn test(&self, _node: &AstNode<'_>, _semantic: &Semantic<'_>, _ctx: &mut Ctx) {
             }
         }
 

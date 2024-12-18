@@ -27,11 +27,9 @@ impl Meta for Es2017TrailingCommasInFunctionSyntax {
     }
     fn subtests(&self) -> Vec<Subtest> {
         vec![
-            Subtest {
-                name: "in parameter lists",
-                exec: "return typeof function f( a, b, ) {} === 'function';",
-            },
-            Subtest { name: "in argument lists", exec: "return Math.min(1,2,3,) === 1;" },
+            Subtest { name : "in parameter lists", exec :
+            "return typeof function f( a, b, ) {} === 'function';", }, Subtest { name :
+            "in argument lists", exec : "return Math.min(1,2,3,) === 1;", },
         ]
     }
 }
