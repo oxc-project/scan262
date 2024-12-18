@@ -43,7 +43,8 @@ fn main() {
             paths.par_iter().for_each(|path| {
                 let source_text = fs::read_to_string(path).unwrap();
                 let scanner = Scanner::new(path.to_path_buf(), source_text);
-                tx_error.send(scanner.scan(FEATURES)).unwrap();
+                let ret = scanner.scan(FEATURES);
+                tx_error.send(Some(ret.diagnostics)).unwrap();
             });
             tx_error.send(None).unwrap();
         }
