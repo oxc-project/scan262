@@ -3,7 +3,7 @@
 use std::{
     fs,
     path::{Path, PathBuf},
-    sync::mpsc,
+    sync::{Arc, Mutex},
 };
 
 use oxc::{diagnostics::DiagnosticService, span::VALID_EXTENSIONS};
@@ -17,7 +17,7 @@ fn get_paths(path: &Path) -> Vec<PathBuf> {
     WalkDir::new(path)
         .into_iter()
         .filter_map(|e| e.ok())
-        .filter(|e| !e.file_type().is_dir())
+        .filter(|e| e.path().is_file())
         .filter(|e| {
             e.path()
                 .extension()
@@ -38,36 +38,44 @@ fn main() {
 
     let mut diagnostic_service = DiagnosticService::default().with_quiet(command.quiet);
     let paths_len = paths.len();
-    let (tx_stats, rx_stats) = mpsc::channel::<Vec<usize>>();
+    let all_stats = Arc::new(Mutex::new(vec![]));
 
     rayon::spawn({
         let tx_error = diagnostic_service.sender().clone();
+        let all_stats = Arc::clone(&all_stats);
         move || {
-            paths.par_iter().for_each(|path| {
-                let source_text = fs::read_to_string(path).unwrap();
-                let scanner = Scanner::new(path.to_path_buf(), source_text);
-                let ret = scanner.scan(FEATURES);
-                tx_stats.send(ret.stats).unwrap();
-                tx_error.send(Some(ret.diagnostics)).unwrap();
-            });
+            let stats = paths
+                .par_iter()
+                .filter_map(|path| {
+                    let Ok(source_text) = fs::read_to_string(path) else { return None };
+                    let scanner = Scanner::new(path.to_path_buf(), source_text);
+                    let ret = scanner.scan(FEATURES);
+                    tx_error.send(Some(ret.diagnostics)).unwrap();
+                    Some(ret.stats)
+                })
+                .reduce(
+                    || vec![0; FEATURES.len()],
+                    |mut a, b| {
+                        for (i, c) in b.into_iter().enumerate() {
+                            a[i] += c;
+                        }
+                        a
+                    },
+                );
+            *all_stats.lock().unwrap() = stats;
             tx_error.send(None).unwrap();
         }
     });
 
     diagnostic_service.run();
 
-    let mut all_stats = vec![0; FEATURES.len()];
-    for _ in 0..paths_len {
-        let stats = rx_stats.recv().unwrap();
-        for (j, count) in stats.iter().enumerate() {
-            all_stats[j] += count;
-        }
-    }
-
+    let all_stats = all_stats.lock().unwrap();
     for (i, feature) in FEATURES.iter().enumerate() {
         let stats = all_stats[i];
         if stats > 0 {
             println!("{}: {}", feature.name(), stats);
         }
     }
+
+    println!("Total number of files scanned: {}", paths_len);
 }
